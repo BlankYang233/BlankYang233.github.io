@@ -3,11 +3,11 @@
   <title>空白のBlog</title>
   
   <subtitle>For the future</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://blankyang233.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://blankyang233.github.io/"/>
   <updated>2022-07-08T18:23:10.572Z</updated>
-  <id>http://example.com/</id>
+  <id>https://blankyang233.github.io/</id>
   
   <author>
     <name>空白</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>NC22604 小A与任务</title>
-    <link href="http://example.com/2022/07/09/NC22604%20%E5%B0%8FA%E4%B8%8E%E4%BB%BB%E5%8A%A1/"/>
-    <id>http://example.com/2022/07/09/NC22604%20%E5%B0%8FA%E4%B8%8E%E4%BB%BB%E5%8A%A1/</id>
+    <link href="https://blankyang233.github.io/2022/07/09/NC22604%20%E5%B0%8FA%E4%B8%8E%E4%BB%BB%E5%8A%A1/"/>
+    <id>https://blankyang233.github.io/2022/07/09/NC22604%20%E5%B0%8FA%E4%B8%8E%E4%BB%BB%E5%8A%A1/</id>
     <published>2022-07-08T18:22:35.000Z</published>
     <updated>2022-07-08T18:23:10.572Z</updated>
     
@@ -30,19 +30,19 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="https://blankyang233.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>NC20154 [JSOI2007]建筑抢修</title>
-    <link href="http://example.com/2022/07/09/NC20154%20[JSOI2007]%E5%BB%BA%E7%AD%91%E6%8A%A2%E4%BF%AE/"/>
-    <id>http://example.com/2022/07/09/NC20154%20[JSOI2007]%E5%BB%BA%E7%AD%91%E6%8A%A2%E4%BF%AE/</id>
+    <link href="https://blankyang233.github.io/2022/07/09/NC20154%20[JSOI2007]%E5%BB%BA%E7%AD%91%E6%8A%A2%E4%BF%AE/"/>
+    <id>https://blankyang233.github.io/2022/07/09/NC20154%20[JSOI2007]%E5%BB%BA%E7%AD%91%E6%8A%A2%E4%BF%AE/</id>
     <published>2022-07-08T17:45:17.000Z</published>
     <updated>2022-07-08T17:45:46.940Z</updated>
     
@@ -53,19 +53,19 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="https://blankyang233.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>NC50439 tokitsukaze and Soldier</title>
-    <link href="http://example.com/2022/07/09/NC50439%20tokitsukaze%20and%20Soldier/"/>
-    <id>http://example.com/2022/07/09/NC50439%20tokitsukaze%20and%20Soldier/</id>
+    <link href="https://blankyang233.github.io/2022/07/09/NC50439%20tokitsukaze%20and%20Soldier/"/>
+    <id>https://blankyang233.github.io/2022/07/09/NC50439%20tokitsukaze%20and%20Soldier/</id>
     <published>2022-07-08T17:33:32.000Z</published>
     <updated>2022-07-08T17:34:01.300Z</updated>
     
@@ -76,19 +76,19 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="https://blankyang233.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>NC17315 背包</title>
-    <link href="http://example.com/2022/07/09/NC17315%20%E8%83%8C%E5%8C%85/"/>
-    <id>http://example.com/2022/07/09/NC17315%20%E8%83%8C%E5%8C%85/</id>
+    <link href="https://blankyang233.github.io/2022/07/09/NC17315%20%E8%83%8C%E5%8C%85/"/>
+    <id>https://blankyang233.github.io/2022/07/09/NC17315%20%E8%83%8C%E5%8C%85/</id>
     <published>2022-07-08T17:15:08.000Z</published>
     <updated>2022-07-08T18:26:32.981Z</updated>
     
@@ -99,21 +99,21 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="https://blankyang233.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
-    <category term="二分" scheme="http://example.com/tags/%E4%BA%8C%E5%88%86/"/>
+    <category term="二分" scheme="https://blankyang233.github.io/tags/%E4%BA%8C%E5%88%86/"/>
     
   </entry>
   
   <entry>
     <title>NC214362 第k小</title>
-    <link href="http://example.com/2022/07/08/NC214362%20%E7%AC%ACk%E5%B0%8F/"/>
-    <id>http://example.com/2022/07/08/NC214362%20%E7%AC%ACk%E5%B0%8F/</id>
+    <link href="https://blankyang233.github.io/2022/07/08/NC214362%20%E7%AC%ACk%E5%B0%8F/"/>
+    <id>https://blankyang233.github.io/2022/07/08/NC214362%20%E7%AC%ACk%E5%B0%8F/</id>
     <published>2022-07-08T15:49:54.000Z</published>
     <updated>2022-07-08T15:50:28.822Z</updated>
     
@@ -124,17 +124,17 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>NC50940 Running Median</title>
-    <link href="http://example.com/2022/07/08/NC50940%20Running%20Median/"/>
-    <id>http://example.com/2022/07/08/NC50940%20Running%20Median/</id>
+    <link href="https://blankyang233.github.io/2022/07/08/NC50940%20Running%20Median/"/>
+    <id>https://blankyang233.github.io/2022/07/08/NC50940%20Running%20Median/</id>
     <published>2022-07-08T15:39:35.000Z</published>
     <updated>2022-07-08T15:40:12.556Z</updated>
     
@@ -145,17 +145,17 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>NC20951 网络优化</title>
-    <link href="http://example.com/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/"/>
-    <id>http://example.com/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/</id>
+    <link href="https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/"/>
+    <id>https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/</id>
     <published>2022-07-08T15:29:19.000Z</published>
     <updated>2022-07-08T15:30:22.488Z</updated>
     
@@ -166,19 +166,19 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="https://blankyang233.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>NC14291 Cut</title>
-    <link href="http://example.com/2022/07/08/NC14291%20Cut/"/>
-    <id>http://example.com/2022/07/08/NC14291%20Cut/</id>
+    <link href="https://blankyang233.github.io/2022/07/08/NC14291%20Cut/"/>
+    <id>https://blankyang233.github.io/2022/07/08/NC14291%20Cut/</id>
     <published>2022-07-08T15:08:52.000Z</published>
     <updated>2022-07-08T15:10:24.421Z</updated>
     
@@ -189,21 +189,21 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="https://blankyang233.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
-    <category term="数学" scheme="http://example.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    <category term="数学" scheme="https://blankyang233.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>NC16663 [NOIP2004]合并果子</title>
-    <link href="http://example.com/2022/07/08/NC16663%20[NOIP2004]%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/"/>
-    <id>http://example.com/2022/07/08/NC16663%20[NOIP2004]%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/</id>
+    <link href="https://blankyang233.github.io/2022/07/08/NC16663%20[NOIP2004]%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/"/>
+    <id>https://blankyang233.github.io/2022/07/08/NC16663%20[NOIP2004]%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/</id>
     <published>2022-07-08T14:48:35.000Z</published>
     <updated>2022-07-08T14:50:34.053Z</updated>
     
@@ -214,14 +214,14 @@
     
     
     
-    <category term="A题笔记" scheme="http://example.com/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="贪心" scheme="http://example.com/tags/%E8%B4%AA%E5%BF%83/"/>
+    <category term="贪心" scheme="https://blankyang233.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
     
-    <category term="优先队列" scheme="http://example.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
-    <category term="队列" scheme="http://example.com/tags/%E9%98%9F%E5%88%97/"/>
+    <category term="队列" scheme="https://blankyang233.github.io/tags/%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
