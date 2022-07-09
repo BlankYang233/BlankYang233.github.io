@@ -6,21 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blankyang233.github.io">
-  <title>NC50940 Running Median | 空白のBlog</title>
+  <title>Archives: 2022/7 | 空白のBlog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="题目链接">
-<meta property="og:type" content="article">
-<meta property="og:title" content="NC50940 Running Median">
-<meta property="og:url" content="https://blankyang233.github.io/2022/07/08/NC50940%20Running%20Median/index.html">
+  <meta name="description" content="写一点小东西">
+<meta property="og:type" content="website">
+<meta property="og:title" content="空白のBlog">
+<meta property="og:url" content="https://blankyang233.github.io/archives/2022/07/page/2/index.html">
 <meta property="og:site_name" content="空白のBlog">
-<meta property="og:description" content="题目链接">
+<meta property="og:description" content="写一点小东西">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-08T15:39:35.000Z">
-<meta property="article:modified_time" content="2022-07-08T15:40:12.556Z">
 <meta property="article:author" content="空白">
-<meta property="article:tag" content="优先队列">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="空白のBlog" type="application/atom+xml">
@@ -241,124 +238,61 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-NC50940 Running Median" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2022/07/08/NC14291%20Cut/" class="archive-article-date">
+        <time datetime="2022-07-08T15:08:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
+</a>
+
+        </div>
+    	 
   
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2022/07/08/NC14291%20Cut/" target="_blank">NC14291 Cut</a>
   
-    <h1 class="article-title" itemprop="name">
-      NC50940 Running Median
     </h1>
   
 
 
-  
-  
-        
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
-        </span>
-
-<a href="/2022/07/08/NC50940%20Running%20Median/" class="archive-article-date">
-        <time datetime="2022-07-08T15:39:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
-</a>
-
-  
-  
-    
-<div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <!-- fonts.scss -->
-      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
-      <i class="icon-statistics"></i>
-      <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">677字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="icon-book icon"></i>
-      <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
-    </span>
-  </span>
-</div>
-
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/50940">题目链接</a></p>
-<span id="more"></span>
-
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>题目描述</strong></p>
-<p>For this problem, you will write a program that reads in a sequence of 32-bit signed integers. After each odd-indexed value is read, output the median (middle value) of the elements received so far.</p>
-<p><strong>输入描述</strong></p>
-<p>The first line of input contains a single integer $P(1 \leq P  \leq 1000)$ , which is the number of data sets that follow. The first line of each data set contains the data set number, followed by a space, followed by an odd decimal integer $M (1  \leq M  \leq 9999)$ , giving the total number of signed integers to be processed. The remaining line(s) in the dataset consists of the values, 10 per line, separated by a single space. The last line in the dataset may contain less than 10 values.</p>
-<p><strong>输出描述</strong></p>
-<p>For each data set the first line of output contains the data set number, a single space and the number of medians output (which should be one-half the number of input values plus one). The output medians will be on the following lines, 10 per line separated by a single space. The last line may have less than 10 elements, but at least 1 element. There should be no blank lines in the output.</p>
-<p><strong>示例1</strong></p>
-<p><strong>输入</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">3 </span><br><span class="line">1 9 </span><br><span class="line">1 2 3 4 5 6 7 8 9 </span><br><span class="line">2 9 </span><br><span class="line">9 8 7 6 5 4 3 2 1 </span><br><span class="line">3 23 </span><br><span class="line">23 41 13 22 -3 24 -31 -11 -8 -7 </span><br><span class="line">3 5 103 211 -311 -45 -67 -73 -81 -99 </span><br><span class="line">-33 24 56</span><br></pre></td></tr></table></figure>
-
-<p><strong>输出</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 5</span><br><span class="line">1 2 3 4 5</span><br><span class="line">2 5</span><br><span class="line">9 8 7 6 5</span><br><span class="line">3 12</span><br><span class="line">23 23 22 22 13 3 5 5 3 -3 </span><br><span class="line">-7 -3</span><br></pre></td></tr></table></figure>
-
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：优先队列。</strong></p>
-<p>用两个优先队列维护中位数左边和右边的序列，因为中位数一定在序列的中间位置，左边比他大，右边比他小且数量几乎一样（相差不超过 $1$ ）。因此左边维护大顶堆，右边维护小顶堆，每次存入数据后比较两序列的大小，那边比那边大超过 $1$ 就把队头转移直至平衡，就可以维护一个动态中位数了。</p>
-<p>时间复杂度 $O(n \log n)$</p>
-<p>空间复杂度 $O(n)$</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> p, m;</span><br><span class="line">    cin &gt;&gt; p &gt;&gt; m;</span><br><span class="line">    cout &lt;&lt; p &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; (m + <span class="number">1</span>) / <span class="number">2</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    priority_queue&lt;<span class="type">int</span>&gt; pq1;</span><br><span class="line">    priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;, greater&lt;<span class="type">int</span>&gt;&gt; pq2;</span><br><span class="line">    <span class="type">int</span> tmp;</span><br><span class="line">    cin &gt;&gt; tmp;</span><br><span class="line">    pq1.<span class="built_in">push</span>(tmp);</span><br><span class="line">    cout &lt;&lt; pq1.<span class="built_in">top</span>() &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>;i &lt;= m;i++) &#123;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        <span class="keyword">if</span> (tmp &lt;= pq1.<span class="built_in">top</span>()) pq1.<span class="built_in">push</span>(tmp);</span><br><span class="line">        <span class="keyword">else</span> pq2.<span class="built_in">push</span>(tmp);</span><br><span class="line">        <span class="keyword">if</span> (pq1.<span class="built_in">size</span>() &gt; <span class="number">1</span> + pq2.<span class="built_in">size</span>()) &#123;</span><br><span class="line">            pq2.<span class="built_in">push</span>(pq1.<span class="built_in">top</span>());</span><br><span class="line">            pq1.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (pq1.<span class="built_in">size</span>() + <span class="number">1</span> &lt; pq2.<span class="built_in">size</span>()) &#123;<span class="comment">///注意，不要size相减，会ULL溢出，-1变最大值</span></span><br><span class="line">            pq1.<span class="built_in">push</span>(pq2.<span class="built_in">top</span>());</span><br><span class="line">            pq2.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i &amp; <span class="number">1</span>) cout &lt;&lt; (pq1.<span class="built_in">size</span>() &gt; pq2.<span class="built_in">size</span>() ? pq1.<span class="built_in">top</span>() : pq2.<span class="built_in">top</span>()) &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span> (!(i % <span class="number">20</span>)) cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> t = <span class="number">1</span>;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">solve</span>()) cout &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-    
-
-    
-
-    
-    <div class="declare"> 
-      <ul class="post-copyright">
-        <li>
-          <strong>本文作者：</strong>
-          空白
-        </li>
-        <li>
-          <strong>本文链接：</strong>
-          <a href="https://blankyang233.github.io/2022/07/08/NC50940 Running Median/" title="NC50940 Running Median" target="_blank">https://blankyang233.github.io/2022/07/08/NC50940 Running Median/</a>
-        </li>
-        
-        <li>
-          <strong>版权声明： </strong>
+        <div class="article-info info-on-right">
           
-          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
-        </li>
-        
-      </ul>
-    </div>
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
         		</li>
       		
 		</ul>
 	</div>
 
-    
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -371,127 +305,83 @@
 	</div>
 
 
-    
-
-    
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/08/NC50940%20Running%20Median/" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
-    <div class="clearfix"></div>
-  </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-<nav id="article-nav">
   
-    <a href="/2022/07/08/NC214362%20%E7%AC%ACk%E5%B0%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          NC214362 第k小
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NC20951 网络优化</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2022/07/08/NC16663%20%5BNOIP2004%5D%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/" class="archive-article-date">
+        <time datetime="2022-07-08T14:48:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
+</a>
 
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
+    	 
+  
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2022/07/08/NC16663%20%5BNOIP2004%5D%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/" target="_blank">NC16663 [NOIP2004]合并果子</a>
+  
+    </h1>
+  
+
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">队列</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
         </div>
-        
-    </div>
-</aside>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
-
-
-
-
-
-
-
-
-
-
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2022/07/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2022/07/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
 
           </div>
@@ -532,8 +422,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
