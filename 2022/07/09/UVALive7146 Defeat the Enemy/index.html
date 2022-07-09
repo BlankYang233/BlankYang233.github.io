@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blankyang233.github.io">
-  <title>空白のBlog</title>
+  <title>UVALive7146 Defeat the Enemy | 空白のBlog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content="写一点小东西"> -->
-  
-  <meta name="description" content="写一点小东西">
-<meta property="og:type" content="website">
-<meta property="og:title" content="空白のBlog">
-<meta property="og:url" content="https://blankyang233.github.io/index.html">
+  <meta name="description" content="题目链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UVALive7146 Defeat the Enemy">
+<meta property="og:url" content="https://blankyang233.github.io/2022/07/09/UVALive7146%20Defeat%20the%20Enemy/index.html">
 <meta property="og:site_name" content="空白のBlog">
-<meta property="og:description" content="写一点小东西">
+<meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-09T10:28:00.000Z">
+<meta property="article:modified_time" content="2022-07-09T10:28:32.935Z">
 <meta property="article:author" content="空白">
+<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="STL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="空白のBlog" type="application/atom+xml">
@@ -242,25 +242,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-UVALive7146 Defeat the Enemy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-UVALive7146 Defeat the Enemy" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/UVALive7146%20Defeat%20the%20Enemy/" target="_blank">UVALive7146 Defeat the Enemy</a>
-  
+    <h1 class="article-title" itemprop="name">
+      UVALive7146 Defeat the Enemy
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2022/07/09/UVALive7146%20Defeat%20the%20Enemy/" class="archive-article-date">
         <time datetime="2022-07-09T10:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
 </a>
@@ -268,6 +268,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">679字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -275,13 +296,42 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/124063">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/UVALive7146%20Defeat%20the%20Enemy/#more">more >></a>
-    
-    
+<span id="more"></span>
+
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>见链接。</p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：贪心，STL。</strong></p>
+<p>首先要保证我方军队能消灭对方军队才行，因此只要我们按攻击力从大到小排，对方按防御力从大到小排，从大到小遍历，用我方所有攻击力大于敌方目前防御力军队中的一个打，就能保证对方小的防御力不会先把我方大的攻击力用掉，导致对方大的防御力没有办法消灭，即能消灭就一定消灭，不能就一定不能返回 $-1$。</p>
+<p>现在考虑保证我方被消灭最少，发现如果在我方攻击力大于对方防御力的军队里面选，一定优先选择防御力刚好大于对方攻击力的军队，这样就可以保证大的防御力能保留，小的防御力不会被消灭；但如果最大的防御力都小于等于对方攻击力，那一定选择防御力最小的军队打，因为既然都会同归于尽，那么就让大的防御力保留，把最小的防御力同归于尽，保证后面有足够的防御力。因此我们这时候需要一个容器能够排序，查询，删除，插入，可以有相同元素，那么就要选择 $multiset$ 存储我方军队防御力。</p>
+<p>于是，每次先把大于等于的军队放入多重集，如果没有则返回 $-1$ 。然后查找一个刚好防御力大于其攻击力的军队打，否则就用防御力最小的打，然后军队存活数量减一。</p>
+<p>时间复杂度 $O((n+m) \log n)$</p>
+<p>空间复杂度 $O(n)$</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> atk, def;</span><br><span class="line">&#125;a[<span class="number">100007</span>], b[<span class="number">100007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i++)cin &gt;&gt; a[i].atk &gt;&gt; a[i].def;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; m;i++)cin &gt;&gt; b[i].def &gt;&gt; b[i].atk;</span><br><span class="line">    <span class="built_in">sort</span>(a, a + n, [&amp;](node a, node b) &#123;<span class="keyword">return</span> a.atk &gt; b.atk;&#125;);</span><br><span class="line">    <span class="built_in">sort</span>(b, b + m, [&amp;](node a, node b) &#123;<span class="keyword">return</span> a.def &gt; b.def;&#125;);</span><br><span class="line">    <span class="type">int</span> cnt = n;</span><br><span class="line">    multiset&lt;<span class="type">int</span>&gt; ms;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;j &lt; m;j++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; n &amp;&amp; a[i].atk &gt;= b[j].def) ms.<span class="built_in">insert</span>(a[i++].def);</span><br><span class="line">        <span class="keyword">if</span> (ms.<span class="built_in">empty</span>()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">auto</span> it = ms.<span class="built_in">upper_bound</span>(b[j].atk);</span><br><span class="line">        <span class="keyword">if</span> (it == ms.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            ms.<span class="built_in">erase</span>(ms.<span class="built_in">begin</span>());</span><br><span class="line">            cnt--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> ms.<span class="built_in">erase</span>(it);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; cnt &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> t = <span class="number">1</span>, cnt = <span class="number">1</span>;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Case #&quot;</span> &lt;&lt; cnt++ &lt;&lt; <span class="string">&quot;:&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">solve</span>()) cout &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     
 
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          空白
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://blankyang233.github.io/2022/07/09/UVALive7146 Defeat the Enemy/" title="UVALive7146 Defeat the Enemy" target="_blank">https://blankyang233.github.io/2022/07/09/UVALive7146 Defeat the Enemy/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -319,10 +369,74 @@
     
 
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/09/UVALive7146%20Defeat%20the%20Enemy/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/09/UVA11020%20Efficient%20Solutions/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UVA11020 Efficient Solutions</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -337,913 +451,33 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-UVA11020 Efficient Solutions" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/UVA11020%20Efficient%20Solutions/" target="_blank">UVA11020 Efficient Solutions</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/UVA11020%20Efficient%20Solutions/" class="archive-article-date">
-        <time datetime="2022-07-09T09:28:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/116634">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/UVA11020%20Efficient%20Solutions/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">思维</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-NC207569 牛牛爱奇数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC207569%20%E7%89%9B%E7%89%9B%E7%88%B1%E5%A5%87%E6%95%B0/" target="_blank">NC207569 牛牛爱奇数</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2022/07/09/NC207569%20%E7%89%9B%E7%89%9B%E7%88%B1%E5%A5%87%E6%95%B0/" class="archive-article-date">
-        <time datetime="2022-07-09T08:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/207569">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC207569%20%E7%89%9B%E7%89%9B%E7%88%B1%E5%A5%87%E6%95%B0/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-NC17889 新建 Microsoft Office Word 文档" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC17889%20%E6%96%B0%E5%BB%BA%20Microsoft%20Office%20Word%20%E6%96%87%E6%A1%A3/" target="_blank">NC17889 新建 Microsoft Office Word 文档</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/NC17889%20%E6%96%B0%E5%BB%BA%20Microsoft%20Office%20Word%20%E6%96%87%E6%A1%A3/" class="archive-article-date">
-        <time datetime="2022-07-09T08:39:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/17889">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC17889%20%E6%96%B0%E5%BB%BA%20Microsoft%20Office%20Word%20%E6%96%87%E6%A1%A3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">模拟</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-NC22596 Rinne Loves Data Structure" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC22596%20Rinne%20Loves%20Data%20Structure/" target="_blank">NC22596 Rinne Loves Data Structure</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/NC22596%20Rinne%20Loves%20Data%20Structure/" class="archive-article-date">
-        <time datetime="2022-07-09T08:22:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/22596">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC22596%20Rinne%20Loves%20Data%20Structure/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">树</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-NC17508 指纹锁" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC17508%20%E6%8C%87%E7%BA%B9%E9%94%81/" target="_blank">NC17508 指纹锁</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/NC17508%20%E6%8C%87%E7%BA%B9%E9%94%81/" class="archive-article-date">
-        <time datetime="2022-07-09T08:06:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/17508">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC17508%20%E6%8C%87%E7%BA%B9%E9%94%81/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">模拟</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-NC15128 老子的全排列呢" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC15128%20%E8%80%81%E5%AD%90%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97%E5%91%A2/" target="_blank">NC15128 老子的全排列呢</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/NC15128%20%E8%80%81%E5%AD%90%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97%E5%91%A2/" class="archive-article-date">
-        <time datetime="2022-07-09T07:46:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/15128">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC15128%20%E8%80%81%E5%AD%90%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97%E5%91%A2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-NC14661 简单的数据结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC14661%20%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" target="_blank">NC14661 简单的数据结构</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/NC14661%20%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="archive-article-date">
-        <time datetime="2022-07-09T07:35:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/14661">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC14661%20%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-NC15688 Operating System" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC15688%20Operating%20System/" target="_blank">NC15688 Operating System</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/NC15688%20Operating%20System/" class="archive-article-date">
-        <time datetime="2022-07-09T07:29:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/15688">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC15688%20Operating%20System/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-NC20185 [JSOI2010]缓存交换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/07/09/NC20185%20%5BJSOI2010%5D%E7%BC%93%E5%AD%98%E4%BA%A4%E6%8D%A2/" target="_blank">NC20185 [JSOI2010]缓存交换</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/07/09/NC20185%20%5BJSOI2010%5D%E7%BC%93%E5%AD%98%E4%BA%A4%E6%8D%A2/" class="archive-article-date">
-        <time datetime="2022-07-09T07:05:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/20185">题目链接</a></p>
-    
-    <a class="article-more-a" href="/2022/07/09/NC20185%20%5BJSOI2010%5D%E7%BC%93%E5%AD%98%E4%BA%A4%E6%8D%A2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -1283,8 +517,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
