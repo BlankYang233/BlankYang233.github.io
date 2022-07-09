@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blankyang233.github.io">
-  <title>Archives: 2022/7 | 空白のBlog</title>
+  <title>NC207569 牛牛爱奇数 | 空白のBlog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="写一点小东西">
-<meta property="og:type" content="website">
-<meta property="og:title" content="空白のBlog">
-<meta property="og:url" content="https://blankyang233.github.io/archives/2022/07/page/2/index.html">
+  <meta name="description" content="题目链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NC207569 牛牛爱奇数">
+<meta property="og:url" content="https://blankyang233.github.io/2022/07/09/NC207569%20%E7%89%9B%E7%89%9B%E7%88%B1%E5%A5%87%E6%95%B0/index.html">
 <meta property="og:site_name" content="空白のBlog">
-<meta property="og:description" content="写一点小东西">
+<meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-09T08:54:37.000Z">
+<meta property="article:modified_time" content="2022-07-09T08:55:22.456Z">
 <meta property="article:author" content="空白">
+<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="优先队列">
+<meta property="article:tag" content="STL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="空白のBlog" type="application/atom+xml">
@@ -238,327 +243,127 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-NC207569 牛牛爱奇数" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/09/NC50439%20tokitsukaze%20and%20Soldier/" class="archive-article-date">
-        <time datetime="2022-07-08T17:33:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/09/NC50439%20tokitsukaze%20and%20Soldier/" target="_blank">NC50439 tokitsukaze and Soldier</a>
   
+    <h1 class="article-title" itemprop="name">
+      NC207569 牛牛爱奇数
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/07/09/NC207569%20%E7%89%9B%E7%89%9B%E7%88%B1%E5%A5%87%E6%95%B0/" class="archive-article-date">
+        <time datetime="2022-07-09T08:54:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">576字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/207569">题目链接</a></p>
+<span id="more"></span>
+
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>题目描述</strong></p>
+<p>  在牛牛面前放着 $n$ 个数，这些数字既有奇数也有偶数，只不过牛牛对奇数情有独钟，他特别想让这些数都变成奇数。 </p>
+<p>  现在牛牛获得了一种能力，他可以执行一种操作：每次选中一个偶数，然后把这些数中与该数相等的数都除以 $2$ ，例如现在有一个数组为$[2,2,3]$ ，那么牛牛可以执行一次操作，使得这个数组变为 $[1,1,3]$ 。 </p>
+<p>  牛牛现在想知道，对于任意的 $n$ 个数，他最少需要操作多少次，使得这些数都变成奇数？ </p>
+<p><strong>示例1</strong></p>
+<p><strong>输入</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,[2,2,3]</span><br></pre></td></tr></table></figure>
+
+<p><strong>返回值</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p><strong>说明</strong></p>
+<p>只需做一次操作，会将其中的偶数 $2$ 都变成 $1$ ，满足了所有的数都是奇数的要求。</p>
+<p><strong>示例2</strong></p>
+<p><strong>输入</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,[1,3,7]</span><br></pre></td></tr></table></figure>
+
+<p><strong>返回值</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+
+<p><strong>说明</strong></p>
+<p>不需要做任何操作，因为所有的数原本就是奇数。</p>
+<p><strong>备注</strong></p>
+<p>$1 \leq n \leq 10^{6}$ ，代表一个有多少数字</p>
+<p>$a_{1},a_{2},a_{3}…a_{n}(1 \leq a_{i} \leq 10^{9})$ 代表数字的大小</p>
+<p>对于 $25%$ 的数据, $1 \leq n \leq 10^{2},1 \leq a_{i} \leq 10^{3}$</p>
+<p>对于 $75%$ 的数据, $1 \leq n \leq 10^{4},1 \leq a_{i} \leq 10^{6}$</p>
+<p>对于 $100%$ 的数据, $1 \leq n \leq 10^{6},1 \leq a_{i} \leq 10^{9}$</p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：贪心，STL，优先队列。</strong></p>
+<p>先把偶数放进优先队列从大到小排，因为大的偶数可能变成已有的小偶数，用小偶数除一次即可，因此从大的偶数开始除。并且因为同一个数字只要除一次，所以把一个除完的数字放回队列即可，剩下的同种数字全部弹出。</p>
+<p>时间复杂度 $O(n \log n)$</p>
+<p>空间复杂度 $O(n)$</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    priority_queue&lt;<span class="type">int</span>&gt; pq;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>, tmp;i &lt; n;i++) &#123;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        <span class="keyword">if</span> (!(tmp &amp; <span class="number">1</span>)) pq.<span class="built_in">push</span>(tmp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!pq.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        ans++;</span><br><span class="line">        <span class="type">int</span> x = pq.<span class="built_in">top</span>();</span><br><span class="line">        <span class="keyword">while</span> (!pq.<span class="built_in">empty</span>() &amp;&amp; pq.<span class="built_in">top</span>() == x) pq.<span class="built_in">pop</span>();</span><br><span class="line">        x &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (!(x &amp; <span class="number">1</span>)) pq.<span class="built_in">push</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          空白
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://blankyang233.github.io/2022/07/09/NC207569 牛牛爱奇数/" title="NC207569 牛牛爱奇数" target="_blank">https://blankyang233.github.io/2022/07/09/NC207569 牛牛爱奇数/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		
-		</ul>
-	</div>
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
   </div>
-</article>
-  
+  <div class="article-info article-info-index">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/09/NC17315%20%E8%83%8C%E5%8C%85/" class="archive-article-date">
-        <time datetime="2022-07-08T17:15:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-09</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/09/NC17315%20%E8%83%8C%E5%8C%85/" target="_blank">NC17315 背包</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">二分</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/08/NC214362%20%E7%AC%ACk%E5%B0%8F/" class="archive-article-date">
-        <time datetime="2022-07-08T15:49:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/08/NC214362%20%E7%AC%ACk%E5%B0%8F/" target="_blank">NC214362 第k小</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/08/NC50940%20Running%20Median/" class="archive-article-date">
-        <time datetime="2022-07-08T15:39:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/08/NC50940%20Running%20Median/" target="_blank">NC50940 Running Median</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" class="archive-article-date">
-        <time datetime="2022-07-08T15:29:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" target="_blank">NC20951 网络优化</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/08/NC14291%20Cut/" class="archive-article-date">
-        <time datetime="2022-07-08T15:08:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/08/NC14291%20Cut/" target="_blank">NC14291 Cut</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -572,13 +377,13 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">STL</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -591,83 +396,118 @@
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/09/NC207569%20%E7%89%9B%E7%89%9B%E7%88%B1%E5%A5%87%E6%95%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/08/NC16663%20%5BNOIP2004%5D%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/" class="archive-article-date">
-        <time datetime="2022-07-08T14:48:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/09/NC17889%20%E6%96%B0%E5%BB%BA%20Microsoft%20Office%20Word%20%E6%96%87%E6%A1%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NC17889 新建 Microsoft Office Word 文档</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/08/NC16663%20%5BNOIP2004%5D%E5%90%88%E5%B9%B6%E6%9E%9C%E5%AD%90/" target="_blank">NC16663 [NOIP2004]合并果子</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">队列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+    </div>
+</aside>
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2022/07/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2022/07/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -708,8 +548,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
