@@ -6,23 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blankyang233.github.io">
-  <title>NC20951 网络优化 | 空白のBlog</title>
+  <title>HDU3038 How Many Answers Are Wrong | 空白のBlog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="题目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NC20951 网络优化">
-<meta property="og:url" content="https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:title" content="HDU3038 How Many Answers Are Wrong">
+<meta property="og:url" content="https://blankyang233.github.io/2022/07/11/HDU3038%20How%20Many%20Answers%20Are%20Wrong/index.html">
 <meta property="og:site_name" content="空白のBlog">
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-08T15:29:19.000Z">
-<meta property="article:modified_time" content="2022-07-08T15:30:22.488Z">
+<meta property="og:image" content="http://acm.hdu.edu.cn/data/images/exe3038-1.JPG">
+<meta property="article:published_time" content="2022-07-10T16:01:38.000Z">
+<meta property="article:modified_time" content="2022-07-10T16:03:09.066Z">
 <meta property="article:author" content="空白">
-<meta property="article:tag" content="优先队列">
-<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="并查集">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://acm.hdu.edu.cn/data/images/exe3038-1.JPG">
   
     <link rel="alternative" href="/atom.xml" title="空白のBlog" type="application/atom+xml">
   
@@ -242,14 +243,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-NC20951 网络优化" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-HDU3038 How Many Answers Are Wrong" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      NC20951 网络优化
+      HDU3038 How Many Answers Are Wrong
     </h1>
   
 
@@ -261,8 +262,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" class="archive-article-date">
-        <time datetime="2022-07-08T15:29:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
+<a href="/2022/07/11/HDU3038%20How%20Many%20Answers%20Are%20Wrong/" class="archive-article-date">
+        <time datetime="2022-07-10T16:01:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-11</time>
 </a>
 
   
@@ -275,7 +276,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">962字</span>
+      <span class="post-count">779字</span>
     </span>
   </span>
 
@@ -284,7 +285,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -295,32 +296,37 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/20951">题目链接</a></p>
+    <p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/showproblem.php?pid=3038">题目链接</a></p>
 <span id="more"></span>
 
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>题目描述</strong>                    </p>
-<p>《梦三国2》是一款3D MOBA类网游。游戏继承《梦三国》的三国文化背景和基础玩法，并加入许多全新地图和全新竞技玩法。由于人气高，游戏在线人数与日俱增，我们知道当在线人数不断增长的时候，会给服务器带来巨大的压力。<br> 已知该游戏中共有n名用户，编号从1到n，服务器共有m条服务线，每个用户最多只能登陆一条线，第i条线最多可以容纳v[i]名用户同时在线，且只能给编号在[l[i],r[i]]范围内的用户提供服务。现在希望找出一种合理的资源分配方案，使得同时在线人数最大化，请输出这个最大人数。</p>
-<p><strong>输入描述</strong></p>
-<p>数据组数不超过10<br>对于每组数据。<br>第一行包括两个正整数n，m(1&lt;&#x3D;n，m&lt;&#x3D;10000)<br>接下来m行，每行三个整数l[i],r[i],v[i]</p>
-<p><strong>输出描述</strong></p>
-<p>对于每组数据输出一个正整数，即最多容纳的用户数量</p>
-<p><strong>示例1</strong></p>
-<p><strong>输入</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br><span class="line">1 1 1</span><br><span class="line">2 4 2</span><br><span class="line">2 3 2</span><br></pre></td></tr></table></figure>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>Problem Description</strong></p>
+<p>TT and FF are … friends. Uh… very very good friends -________-b</p>
+<p>FF is a bad boy, he is always wooing TT to play the following game with him. This is a very humdrum game. To begin with, TT should write down a sequence of integers-_-!!(bored).<br><img src="http://acm.hdu.edu.cn/data/images/exe3038-1.JPG" alt="img"><br>Then, FF can choose a continuous subsequence from it(for example the subsequence from the third to the fifth integer inclusively). After that, FF will ask TT what the sum of the subsequence he chose is. The next, TT will answer FF’s question. Then, FF can redo this process. In the end, FF must work out the entire sequence of integers.</p>
+<p>Boring~~Boring~~a very very boring game!!! TT doesn’t want to play with FF at all. To punish FF, she often tells FF the wrong answers on purpose.</p>
+<p>The bad boy is not a fool man. FF detects some answers are incompatible. Of course, these contradictions make it difficult to calculate the sequence.</p>
+<p>However, TT is a nice and lovely girl. She doesn’t have the heart to be hard on FF. To save time, she guarantees that the answers are all right if there is no logical mistakes indeed.</p>
+<p>What’s more, if FF finds an answer to be wrong, he will ignore it when judging next answers.</p>
+<p>But there will be so many questions that poor FF can’t make sure whether the current answer is right or wrong in a moment. So he decides to write a program to help him with this matter. The program will receive a series of questions from FF together with the answers FF has received from TT. The aim of this program is to find how many answers are wrong. Only by ignoring the wrong answers can FF work out the entire sequence of integers. Poor FF has no time to do this job. And now he is asking for your help~(Why asking trouble for himself~~Bad boy)</p>
+<p><strong>Input</strong></p>
+<p>Line 1: Two integers, N and M (1 &lt;&#x3D; N &lt;&#x3D; 200000, 1 &lt;&#x3D; M &lt;&#x3D; 40000). Means TT wrote N integers and FF asked her M questions.</p>
+<p>Line 2..M+1: Line i+1 contains three integer: Ai, Bi and Si. Means TT answered FF that the sum from Ai to Bi is Si. It’s guaranteed that 0 &lt; Ai &lt;&#x3D; Bi &lt;&#x3D; N.</p>
+<p>You can assume that any sum of subsequence is fit in 32-bit integer.</p>
+<p><strong>Output</strong></p>
+<p>A single line with a integer denotes how many answers are wrong.</p>
+<p><strong>Sample Input</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">10 5</span><br><span class="line">1 10 100</span><br><span class="line">7 10 28</span><br><span class="line">1 3 32</span><br><span class="line">4 6 41</span><br><span class="line">6 6 1</span><br></pre></td></tr></table></figure>
 
-<p><strong>输出</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+<p><strong>Sample Output</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明</strong></p>
-<p>我们可以让1号服务线服务用户1，2号服务线服务用户4，3号服务线服务用户2和3</p>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：贪心，优先队列。</strong></p>
-<p>第一个想到的贪心是让区间的右端点从小到大排序，然后从第一个人开始遍历，看看在不在这个区间。因为这样做前面的人匹配到靠前的线路，可以让更多后面的人有机会匹配到线路。若是人的编号超过右端点了，对于这个人，这条线路就用不了了，可以丢了。</p>
-<p>但还需要注意左端点，因为假设左端点够不到某个人，但其右端点是靠前的，那对于后面能用的人这个线路就被扔掉了，是浪费了。因此我们要对每个人，把从他开始的线路，即左端点刚好是他编号的线路，先放入优先队列按右端点从小到大排序，这样优先队列里参与匹配的线路就都是够得到当前点，且是按右端点排序好的。</p>
-<p>所以我们一开始把线路按左端点从小到大排序，遇到一个人就把从他开始的线路加入优先队列，这样选的时候就都是够得到的线路。再把有效的线路按右端点从小到大排序，尽可能用掉右端点靠前的线路，少占用右端点靠后的线路，给后面人留机会。最后编号超过队头右端点就可以弹出队头，因为这条线路不可能用得到了。</p>
-<p>注意，没用完的线路要放回队列。</p>
-<p>时间复杂度 $O(n \log n)$</p>
+<p><strong>Source</strong></p>
+<p><a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/search.php?field=problem&key=2009+Multi-University+Training+Contest+13+-+Host+by+HIT&source=1&searchmode=source">2009 Multi-University Training Contest 13 - Host by HIT</a></p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：并查集。</strong></p>
+<p>因为给出的是区间和，我们拆分成两端前缀和方便用带权并查集维护。</p>
+<p>依然用向量的思想会很好理解合并和压缩过程中的计算。</p>
+<p>时间复杂度 $O(n+m\log n)$</p>
 <p>空间复杂度 $O(n)$</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> l, r, v;</span><br><span class="line">&#125;a[<span class="number">10007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n &gt;&gt; m) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; m;i++) cin &gt;&gt; a[i].l &gt;&gt; a[i].r &gt;&gt; a[i].v;</span><br><span class="line">        <span class="built_in">sort</span>(a, a + m, [&amp;](node a, node b) &#123;<span class="keyword">return</span> a.l &lt; b.l;&#125;);</span><br><span class="line">        priority_queue&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;, vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;, greater&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;&gt; pq;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, pos = <span class="number">0</span>;i &lt;= n;i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!pq.<span class="built_in">empty</span>() &amp;&amp; pq.<span class="built_in">top</span>().first &lt; i) pq.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">while</span> (pos &lt; m &amp;&amp; a[pos].l == i) &#123;</span><br><span class="line">                pq.<span class="built_in">push</span>(&#123; a[pos].r,a[pos].v &#125;);</span><br><span class="line">                pos++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!pq.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                ans++;</span><br><span class="line">                pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; x = pq.<span class="built_in">top</span>();</span><br><span class="line">                pq.<span class="built_in">pop</span>();</span><br><span class="line">                x.second--;</span><br><span class="line">                <span class="keyword">if</span> (x.second) pq.<span class="built_in">push</span>(x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> fa[<span class="number">200007</span>], sum[<span class="number">200007</span>];<span class="comment">///sum[i] 指 (i,根节点]的和</span></span><br><span class="line"><span class="comment">///可以理解为一个点到点的向量长度，这样就可以用向量加减理解</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (fa[x] == x) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="type">int</span> pre = fa[x];</span><br><span class="line">    fa[x] = <span class="built_in">find</span>(fa[x]);</span><br><span class="line">    sum[x] += sum[pre];<span class="comment">///递归求和，路径压缩</span></span><br><span class="line">    <span class="keyword">return</span> fa[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n &gt;&gt; m) &#123;<span class="comment">///不是我的锅，是他没写</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt;= n;i++) fa[i] = i, sum[i] = <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b, S;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b &gt;&gt; S;</span><br><span class="line">            a--;</span><br><span class="line">            <span class="type">int</span> ra = <span class="built_in">find</span>(a);</span><br><span class="line">            <span class="type">int</span> rb = <span class="built_in">find</span>(b);</span><br><span class="line">            ll A = sum[a];</span><br><span class="line">            ll B = sum[b];</span><br><span class="line">            <span class="keyword">if</span> (ra == rb) &#123;</span><br><span class="line">                <span class="keyword">if</span> (A - B != S) cnt++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                sum[ra] = B + S - A;<span class="comment">///(ra,rb]的大小,可以是逆序的，这样和就是相反数</span></span><br><span class="line">                fa[ra] = rb;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; cnt &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     
@@ -336,7 +342,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://blankyang233.github.io/2022/07/08/NC20951 网络优化/" title="NC20951 网络优化" target="_blank">https://blankyang233.github.io/2022/07/08/NC20951 网络优化/</a>
+          <a href="https://blankyang233.github.io/2022/07/11/HDU3038 How Many Answers Are Wrong/" title="HDU3038 How Many Answers Are Wrong" target="_blank">https://blankyang233.github.io/2022/07/11/HDU3038 How Many Answers Are Wrong/</a>
         </li>
         
         <li>
@@ -358,11 +364,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">并查集</a>
         		</li>
       		
 		</ul>
@@ -429,7 +431,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/11/HDU3038%20How%20Many%20Answers%20Are%20Wrong/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -444,18 +446,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/07/08/NC50940%20Running%20Median/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          NC50940 Running Median
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/07/08/NC14291%20Cut/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NC14291 Cut</div>
+    <a href="/2022/07/10/POJ1984%20Navigation%20Nightmare/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">POJ1984 Navigation Nightmare</div>
       <i class="icon-circle-right"></i>
     </a>
   

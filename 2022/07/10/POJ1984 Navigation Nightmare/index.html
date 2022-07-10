@@ -6,22 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blankyang233.github.io">
-  <title>NC20951 网络优化 | 空白のBlog</title>
+  <title>POJ1984 Navigation Nightmare | 空白のBlog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="题目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NC20951 网络优化">
-<meta property="og:url" content="https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:title" content="POJ1984 Navigation Nightmare">
+<meta property="og:url" content="https://blankyang233.github.io/2022/07/10/POJ1984%20Navigation%20Nightmare/index.html">
 <meta property="og:site_name" content="空白のBlog">
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-08T15:29:19.000Z">
-<meta property="article:modified_time" content="2022-07-08T15:30:22.488Z">
+<meta property="article:published_time" content="2022-07-10T15:44:58.000Z">
+<meta property="article:modified_time" content="2022-07-10T15:45:44.326Z">
 <meta property="article:author" content="空白">
-<meta property="article:tag" content="优先队列">
-<meta property="article:tag" content="贪心">
+<meta property="article:tag" content="并查集">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="空白のBlog" type="application/atom+xml">
@@ -242,14 +241,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-NC20951 网络优化" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-POJ1984 Navigation Nightmare" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      NC20951 网络优化
+      POJ1984 Navigation Nightmare
     </h1>
   
 
@@ -261,8 +260,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" class="archive-article-date">
-        <time datetime="2022-07-08T15:29:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
+<a href="/2022/07/10/POJ1984%20Navigation%20Nightmare/" class="archive-article-date">
+        <time datetime="2022-07-10T15:44:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-10</time>
 </a>
 
   
@@ -275,7 +274,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">962字</span>
+      <span class="post-count">1.3k字</span>
     </span>
   </span>
 
@@ -284,7 +283,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">7分</span>
     </span>
   </span>
 </div>
@@ -295,32 +294,57 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/20951">题目链接</a></p>
+    <p><a target="_blank" rel="noopener" href="http://poj.org/problem?id=1984">题目链接</a></p>
 <span id="more"></span>
 
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>题目描述</strong>                    </p>
-<p>《梦三国2》是一款3D MOBA类网游。游戏继承《梦三国》的三国文化背景和基础玩法，并加入许多全新地图和全新竞技玩法。由于人气高，游戏在线人数与日俱增，我们知道当在线人数不断增长的时候，会给服务器带来巨大的压力。<br> 已知该游戏中共有n名用户，编号从1到n，服务器共有m条服务线，每个用户最多只能登陆一条线，第i条线最多可以容纳v[i]名用户同时在线，且只能给编号在[l[i],r[i]]范围内的用户提供服务。现在希望找出一种合理的资源分配方案，使得同时在线人数最大化，请输出这个最大人数。</p>
-<p><strong>输入描述</strong></p>
-<p>数据组数不超过10<br>对于每组数据。<br>第一行包括两个正整数n，m(1&lt;&#x3D;n，m&lt;&#x3D;10000)<br>接下来m行，每行三个整数l[i],r[i],v[i]</p>
-<p><strong>输出描述</strong></p>
-<p>对于每组数据输出一个正整数，即最多容纳的用户数量</p>
-<p><strong>示例1</strong></p>
-<p><strong>输入</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br><span class="line">1 1 1</span><br><span class="line">2 4 2</span><br><span class="line">2 3 2</span><br></pre></td></tr></table></figure>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>Description</strong></p>
+<p>Farmer John’s pastoral neighborhood has N farms (2 &lt;&#x3D; N &lt;&#x3D; 40,000), usually numbered&#x2F;labeled 1..N. A series of M (1 &lt;&#x3D; M &lt; 40,000) vertical and horizontal roads each of varying lengths (1 &lt;&#x3D; length &lt;&#x3D; 1000) connect the farms. A map of these farms might look something like the illustration below in which farms are labeled F1..F7 for clarity and lengths between connected farms are shown as (n):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">F1 --- (13) ---- F6 --- (9) ----- F3</span><br><span class="line"> |                                 |</span><br><span class="line">(3)                                |</span><br><span class="line"> |                                (7)</span><br><span class="line">F4 --- (20) -------- F2            |</span><br><span class="line"> |                                 |</span><br><span class="line">(2)                               F5</span><br><span class="line"> | </span><br><span class="line">F7 </span><br></pre></td></tr></table></figure>
 
-<p><strong>输出</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明</strong></p>
-<p>我们可以让1号服务线服务用户1，2号服务线服务用户4，3号服务线服务用户2和3</p>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：贪心，优先队列。</strong></p>
-<p>第一个想到的贪心是让区间的右端点从小到大排序，然后从第一个人开始遍历，看看在不在这个区间。因为这样做前面的人匹配到靠前的线路，可以让更多后面的人有机会匹配到线路。若是人的编号超过右端点了，对于这个人，这条线路就用不了了，可以丢了。</p>
-<p>但还需要注意左端点，因为假设左端点够不到某个人，但其右端点是靠前的，那对于后面能用的人这个线路就被扔掉了，是浪费了。因此我们要对每个人，把从他开始的线路，即左端点刚好是他编号的线路，先放入优先队列按右端点从小到大排序，这样优先队列里参与匹配的线路就都是够得到当前点，且是按右端点排序好的。</p>
-<p>所以我们一开始把线路按左端点从小到大排序，遇到一个人就把从他开始的线路加入优先队列，这样选的时候就都是够得到的线路。再把有效的线路按右端点从小到大排序，尽可能用掉右端点靠前的线路，少占用右端点靠后的线路，给后面人留机会。最后编号超过队头右端点就可以弹出队头，因为这条线路不可能用得到了。</p>
-<p>注意，没用完的线路要放回队列。</p>
-<p>时间复杂度 $O(n \log n)$</p>
-<p>空间复杂度 $O(n)$</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> l, r, v;</span><br><span class="line">&#125;a[<span class="number">10007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n &gt;&gt; m) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; m;i++) cin &gt;&gt; a[i].l &gt;&gt; a[i].r &gt;&gt; a[i].v;</span><br><span class="line">        <span class="built_in">sort</span>(a, a + m, [&amp;](node a, node b) &#123;<span class="keyword">return</span> a.l &lt; b.l;&#125;);</span><br><span class="line">        priority_queue&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;, vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;, greater&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;&gt; pq;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, pos = <span class="number">0</span>;i &lt;= n;i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!pq.<span class="built_in">empty</span>() &amp;&amp; pq.<span class="built_in">top</span>().first &lt; i) pq.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">while</span> (pos &lt; m &amp;&amp; a[pos].l == i) &#123;</span><br><span class="line">                pq.<span class="built_in">push</span>(&#123; a[pos].r,a[pos].v &#125;);</span><br><span class="line">                pos++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!pq.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                ans++;</span><br><span class="line">                pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; x = pq.<span class="built_in">top</span>();</span><br><span class="line">                pq.<span class="built_in">pop</span>();</span><br><span class="line">                x.second--;</span><br><span class="line">                <span class="keyword">if</span> (x.second) pq.<span class="built_in">push</span>(x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Being an ASCII diagram, it is not precisely to scale, of course.</p>
+<p>Each farm can connect directly to at most four other farms via roads that lead exactly north, south, east, and&#x2F;or west. Moreover, farms are only located at the endpoints of roads, and some farm can be found at every endpoint of every road. No two roads cross, and precisely one path<br>(sequence of roads) links every pair of farms.</p>
+<p>FJ lost his paper copy of the farm map and he wants to reconstruct it from backup information on his computer. This data contains lines like the following, one for every road:</p>
+<p>There is a road of length 10 running north from Farm #23 to Farm #17<br>There is a road of length 7 running east from Farm #1 to Farm #17<br>…</p>
+<p>As FJ is retrieving this data, he is occasionally interrupted by questions such as the following that he receives from his navigationally-challenged neighbor, farmer Bob:</p>
+<p>What is the Manhattan distance between farms #1 and #23?</p>
+<p>FJ answers Bob, when he can (sometimes he doesn’t yet have enough data yet). In the example above, the answer would be 17, since Bob wants to know the “Manhattan” distance between the pair of farms.<br>The Manhattan distance between two points (x1,y1) and (x2,y2) is just |x1-x2| + |y1-y2| (which is the distance a taxicab in a large city must travel over city streets in a perfect grid to connect two x,y points).</p>
+<p>When Bob asks about a particular pair of farms, FJ might not yet have enough information to deduce the distance between them; in this case, FJ apologizes profusely and replies with “-1”.</p>
+<p><strong>Input</strong></p>
+<ul>
+<li><p>Line 1: Two space-separated integers: N and M</p>
+</li>
+<li><p>Lines 2..M+1: Each line contains four space-separated entities, F1,<br>F2, L, and D that describe a road. F1 and F2 are numbers of<br>two farms connected by a road, L is its length, and D is a<br>character that is either ‘N’, ‘E’, ‘S’, or ‘W’ giving the<br>direction of the road from F1 to F2.</p>
+</li>
+<li><p>Line M+2: A single integer, K (1 &lt;&#x3D; K &lt;&#x3D; 10,000), the number of FB’s<br>queries</p>
+</li>
+<li><p>Lines M+3..M+K+2: Each line corresponds to a query from Farmer Bob<br>and contains three space-separated integers: F1, F2, and I. F1<br>and F2 are numbers of the two farms in the query and I is the<br>index (1 &lt;&#x3D; I &lt;&#x3D; M) in the data after which Bob asks the<br>query. Data index 1 is on line 2 of the input data, and so on.</p>
+</li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li>Lines 1..K: One integer per line, the response to each of Bob’s<br>queries.  Each line should contain either a distance<br>measurement or -1, if it is impossible to determine the<br>appropriate distance.</li>
+</ul>
+<p><strong>Sample Input</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">7 6</span><br><span class="line">1 6 13 E</span><br><span class="line">6 3 9 E</span><br><span class="line">3 5 7 S</span><br><span class="line">4 1 3 N</span><br><span class="line">2 4 20 W</span><br><span class="line">4 7 2 S</span><br><span class="line">3</span><br><span class="line">1 6 1</span><br><span class="line">1 4 3</span><br><span class="line">2 6 6</span><br></pre></td></tr></table></figure>
+
+<p><strong>Sample Output</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">13</span><br><span class="line">-1</span><br><span class="line">10</span><br></pre></td></tr></table></figure>
+
+<p><strong>Hint</strong></p>
+<p>At time 1, FJ knows the distance between 1 and 6 is 13.<br>At time 3, the distance between 1 and 4 is still unknown.<br>At the end, location 6 is 3 units west and 7 north of 2, so the distance is 10.</p>
+<p><strong>Source</strong></p>
+<p><a target="_blank" rel="noopener" href="http://poj.org/searchproblem?field=source&key=USACO+2004+February">USACO 2004 February</a></p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：并查集。</strong></p>
+<p>显然用带权并查集维护子节点到根节点的坐标变化。</p>
+<p>考虑用 $x$ 代表东西方向位移 ，$y$ 代表南北方向位移，取北和东为正方向。</p>
+<p>压缩路径和合并都可以向量理解：</p>
+<p>压缩路径，$\vec{ar} &#x3D; \vec{ab} + \vec{br}$ ，其中 $a$ 是待压缩节点，$b$ 是父节点，$r$ 是根节点。</p>
+<p>合并集合，$\vec{AB} &#x3D; -\vec{aA} + \vec{ab} + \vec{bB}$ ，$a$ 和 $b$ 是条件给出节点，$A$ 和 $B$ 是条件节点所在集合的根节点，目的是把 $A$ 合并到 $B$。</p>
+<p>输入输出极度复杂，需要先保存信息，再离线处理，在每个时间点记录答案，最后输出。</p>
+<p>时间复杂度 $O(n + m\log n + k\log k)$</p>
+<p>空间复杂度 $O(n+m+k)$</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">&#125;v[<span class="number">40007</span>];</span><br><span class="line"><span class="type">int</span> fa[<span class="number">40007</span>];</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Info1</span> &#123;</span><br><span class="line">    <span class="type">int</span> f1, f2, l;</span><br><span class="line">    <span class="type">char</span> d;</span><br><span class="line">&#125;in1[<span class="number">40007</span>];</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Info2</span> &#123;</span><br><span class="line">    <span class="type">int</span> f1, f2, t, id;</span><br><span class="line">&#125;in2[<span class="number">40007</span>];</span><br><span class="line"><span class="type">int</span> ans[<span class="number">40007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (fa[x] == x) <span class="keyword">return</span> x;</span><br><span class="line">    <span class="type">int</span> pre = fa[x];</span><br><span class="line">    fa[x] = <span class="built_in">find</span>(fa[x]);</span><br><span class="line">    v[x].x += v[pre].x;</span><br><span class="line">    v[x].y += v[pre].y;</span><br><span class="line">    <span class="keyword">return</span> fa[x];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(Info2 a, Info2 b)</span> </span>&#123; <span class="keyword">return</span> a.t &lt; b.t; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) fa[i] = i;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++) &#123;</span><br><span class="line">        cin &gt;&gt; in1[i].f1 &gt;&gt; in1[i].f2 &gt;&gt; in1[i].l &gt;&gt; in1[i].d;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> k;</span><br><span class="line">    cin &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= k;i++) &#123;</span><br><span class="line">        cin &gt;&gt; in2[i].f1 &gt;&gt; in2[i].f2 &gt;&gt; in2[i].t;</span><br><span class="line">        in2[i].id = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(in2 + <span class="number">1</span>, in2 + <span class="number">1</span> + k, cmp);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> t = <span class="number">1</span>, pos = <span class="number">1</span>;t &lt;= m;t++) &#123;</span><br><span class="line">        <span class="type">int</span> r1 = <span class="built_in">find</span>(in1[t].f1);</span><br><span class="line">        <span class="type">int</span> r2 = <span class="built_in">find</span>(in1[t].f2);</span><br><span class="line">        <span class="keyword">if</span> (in1[t].d == <span class="string">&#x27;N&#x27;</span> || in1[t].d == <span class="string">&#x27;S&#x27;</span>) &#123;</span><br><span class="line">            <span class="type">int</span> y;</span><br><span class="line">            <span class="keyword">if</span> (in1[t].d == <span class="string">&#x27;N&#x27;</span>) y = in1[t].l;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (in1[t].d == <span class="string">&#x27;S&#x27;</span>) y = -in1[t].l;</span><br><span class="line">            v[r1].x = -v[in1[t].f1].x + v[in1[t].f2].x;</span><br><span class="line">            v[r1].y = -v[in1[t].f1].y + y + v[in1[t].f2].y;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (in1[t].d == <span class="string">&#x27;E&#x27;</span> || in1[t].d == <span class="string">&#x27;W&#x27;</span>) &#123;</span><br><span class="line">            <span class="type">int</span> x;</span><br><span class="line">            <span class="keyword">if</span> (in1[t].d == <span class="string">&#x27;E&#x27;</span>) x = in1[t].l;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (in1[t].d == <span class="string">&#x27;W&#x27;</span>) x = -in1[t].l;</span><br><span class="line">            v[r1].x = -v[in1[t].f1].x + x + v[in1[t].f2].x;</span><br><span class="line">            v[r1].y = -v[in1[t].f1].y + v[in1[t].f2].y;</span><br><span class="line">        &#125;</span><br><span class="line">        fa[r1] = r2;</span><br><span class="line">        <span class="keyword">while</span> (t == in2[pos].t) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">find</span>(in2[pos].f1) == <span class="built_in">find</span>(in2[pos].f2)) &#123;</span><br><span class="line">                ans[in2[pos].id] = <span class="built_in">abs</span>(v[in2[pos].f1].x - v[in2[pos].f2].x) + <span class="built_in">abs</span>(v[in2[pos].f1].y - v[in2[pos].f2].y);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> ans[in2[pos].id] = <span class="number">-1</span>;</span><br><span class="line">            pos++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= k;i++) cout &lt;&lt; ans[i] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     
@@ -336,7 +360,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://blankyang233.github.io/2022/07/08/NC20951 网络优化/" title="NC20951 网络优化" target="_blank">https://blankyang233.github.io/2022/07/08/NC20951 网络优化/</a>
+          <a href="https://blankyang233.github.io/2022/07/10/POJ1984 Navigation Nightmare/" title="POJ1984 Navigation Nightmare" target="_blank">https://blankyang233.github.io/2022/07/10/POJ1984 Navigation Nightmare/</a>
         </li>
         
         <li>
@@ -358,11 +382,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">并查集</a>
         		</li>
       		
 		</ul>
@@ -429,7 +449,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/10/POJ1984%20Navigation%20Nightmare/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -444,18 +464,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/07/08/NC50940%20Running%20Median/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/07/11/HDU3038%20How%20Many%20Answers%20Are%20Wrong/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          NC50940 Running Median
+          HDU3038 How Many Answers Are Wrong
         
       </div>
     </a>
   
   
-    <a href="/2022/07/08/NC14291%20Cut/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NC14291 Cut</div>
+    <a href="/2022/07/10/POJ1417%20True%20Liars/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">POJ1417 True Liars</div>
       <i class="icon-circle-right"></i>
     </a>
   

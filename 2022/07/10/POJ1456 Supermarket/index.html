@@ -6,23 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blankyang233.github.io">
-  <title>NC20951 网络优化 | 空白のBlog</title>
+  <title>POJ1456 Supermarket | 空白のBlog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="题目链接">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NC20951 网络优化">
-<meta property="og:url" content="https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:title" content="POJ1456 Supermarket">
+<meta property="og:url" content="https://blankyang233.github.io/2022/07/10/POJ1456%20Supermarket/index.html">
 <meta property="og:site_name" content="空白のBlog">
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-08T15:29:19.000Z">
-<meta property="article:modified_time" content="2022-07-08T15:30:22.488Z">
+<meta property="og:image" content="http://poj.org/images/1456_1.jpg">
+<meta property="article:published_time" content="2022-07-10T15:15:16.000Z">
+<meta property="article:modified_time" content="2022-07-10T15:16:41.790Z">
 <meta property="article:author" content="空白">
 <meta property="article:tag" content="优先队列">
 <meta property="article:tag" content="贪心">
+<meta property="article:tag" content="并查集">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://poj.org/images/1456_1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="空白のBlog" type="application/atom+xml">
   
@@ -242,14 +245,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-NC20951 网络优化" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-POJ1456 Supermarket" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      NC20951 网络优化
+      POJ1456 Supermarket
     </h1>
   
 
@@ -261,8 +264,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" class="archive-article-date">
-        <time datetime="2022-07-08T15:29:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-08</time>
+<a href="/2022/07/10/POJ1456%20Supermarket/" class="archive-article-date">
+        <time datetime="2022-07-10T15:15:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-10</time>
 </a>
 
   
@@ -275,7 +278,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">962字</span>
+      <span class="post-count">1.1k字</span>
     </span>
   </span>
 
@@ -284,7 +287,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -295,32 +298,41 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/problem/20951">题目链接</a></p>
+    <p><a target="_blank" rel="noopener" href="http://poj.org/problem?id=1456">题目链接</a></p>
 <span id="more"></span>
 
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>题目描述</strong>                    </p>
-<p>《梦三国2》是一款3D MOBA类网游。游戏继承《梦三国》的三国文化背景和基础玩法，并加入许多全新地图和全新竞技玩法。由于人气高，游戏在线人数与日俱增，我们知道当在线人数不断增长的时候，会给服务器带来巨大的压力。<br> 已知该游戏中共有n名用户，编号从1到n，服务器共有m条服务线，每个用户最多只能登陆一条线，第i条线最多可以容纳v[i]名用户同时在线，且只能给编号在[l[i],r[i]]范围内的用户提供服务。现在希望找出一种合理的资源分配方案，使得同时在线人数最大化，请输出这个最大人数。</p>
-<p><strong>输入描述</strong></p>
-<p>数据组数不超过10<br>对于每组数据。<br>第一行包括两个正整数n，m(1&lt;&#x3D;n，m&lt;&#x3D;10000)<br>接下来m行，每行三个整数l[i],r[i],v[i]</p>
-<p><strong>输出描述</strong></p>
-<p>对于每组数据输出一个正整数，即最多容纳的用户数量</p>
-<p><strong>示例1</strong></p>
-<p><strong>输入</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">5 3</span><br><span class="line">1 1 1</span><br><span class="line">2 4 2</span><br><span class="line">2 3 2</span><br></pre></td></tr></table></figure>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>Description</strong></p>
+<p>A supermarket has a set Prod of products on sale. It earns a profit px for each product x∈Prod sold by a deadline dx that is measured as an integral number of time units starting from the moment the sale begins. Each product takes precisely one unit of time for being sold. A selling schedule is an ordered subset of products Sell ≤ Prod such that the selling of each product x∈Sell, according to the ordering of Sell, completes before the deadline dx or just when dx expires. The profit of the selling schedule is Profit(Sell)&#x3D;Σx∈Sellpx. An optimal selling schedule is a schedule with a maximum profit. </p>
+<p>For example, consider the products Prod&#x3D;{a,b,c,d} with (pa,da)&#x3D;(50,2), (pb,db)&#x3D;(10,1), (pc,dc)&#x3D;(20,2), and (pd,dd)&#x3D;(30,1). The possible selling schedules are listed in table 1. For instance, the schedule Sell&#x3D;{d,a} shows that the selling of product d starts at time 0 and ends at time 1, while the selling of product a starts at time 1 and ends at time 2. Each of these products is sold by its deadline. Sell is the optimal schedule and its profit is 80.</p>
+<p> <img src="http://poj.org/images/1456_1.jpg" alt="img"> </p>
+<p>Write a program that reads sets of products from an input text file and computes the profit of an optimal selling schedule for each set of products.</p>
+<p><strong>Input</strong></p>
+<p>A set of products starts with an integer 0 &lt;&#x3D; n &lt;&#x3D; 10000, which is the number of products in the set, and continues with n pairs pi di of integers, 1 &lt;&#x3D; pi &lt;&#x3D; 10000 and 1 &lt;&#x3D; di &lt;&#x3D; 10000, that designate the profit and the selling deadline of the i-th product. White spaces can occur freely in input. Input data terminate with an end of file and are guaranteed correct.</p>
+<p><strong>Output</strong></p>
+<p>For each set of products, the program prints on the standard output the profit of an optimal selling schedule for the set. Each result is printed from the beginning of a separate line.</p>
+<p><strong>Sample Input</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">4  50 2  10 1   20 2   30 1</span><br><span class="line"></span><br><span class="line">7  20 1   2 1   10 3  100 2   8 2</span><br><span class="line">   5 20  50 10</span><br></pre></td></tr></table></figure>
 
-<p><strong>输出</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+<p><strong>Sample Output</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">80</span><br><span class="line">185</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明</strong></p>
-<p>我们可以让1号服务线服务用户1，2号服务线服务用户4，3号服务线服务用户2和3</p>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：贪心，优先队列。</strong></p>
-<p>第一个想到的贪心是让区间的右端点从小到大排序，然后从第一个人开始遍历，看看在不在这个区间。因为这样做前面的人匹配到靠前的线路，可以让更多后面的人有机会匹配到线路。若是人的编号超过右端点了，对于这个人，这条线路就用不了了，可以丢了。</p>
-<p>但还需要注意左端点，因为假设左端点够不到某个人，但其右端点是靠前的，那对于后面能用的人这个线路就被扔掉了，是浪费了。因此我们要对每个人，把从他开始的线路，即左端点刚好是他编号的线路，先放入优先队列按右端点从小到大排序，这样优先队列里参与匹配的线路就都是够得到当前点，且是按右端点排序好的。</p>
-<p>所以我们一开始把线路按左端点从小到大排序，遇到一个人就把从他开始的线路加入优先队列，这样选的时候就都是够得到的线路。再把有效的线路按右端点从小到大排序，尽可能用掉右端点靠前的线路，少占用右端点靠后的线路，给后面人留机会。最后编号超过队头右端点就可以弹出队头，因为这条线路不可能用得到了。</p>
-<p>注意，没用完的线路要放回队列。</p>
+<p><strong>Hint</strong></p>
+<p>The sample input contains two product sets. The first set encodes the products from table 1. The second set is for 7 products. The profit of an optimal schedule for these products is 185.</p>
+<p><strong>Source</strong></p>
+<p><a target="_blank" rel="noopener" href="http://poj.org/searchproblem?field=source&key=Southeastern+Europe+2003">Southeastern Europe 2003</a></p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p><strong>知识点：并查集，贪心。</strong></p>
+<p>这道题和并查集结合起来还是挺妙的。</p>
+<p>首先考虑一个贪心，每次先安排价值最高的。如此选择，如果一个货物在期限之前无法安排，那说明其期限之前的所有天数都被比他价值高的货物占据了，此时这个货物可以被抛弃，强行售出只会降低总收益。</p>
+<p>为了判断货物是否存在某天能够被安排，需要知道其距离期限最近的一个可用天数，因为如果选过早的话，可能会把其他期限靠前的货物的机会使用掉。考虑使用并查集维护从过期时间向前数的第一个未占用位置，如果第一个未被占用位置为 $0$ 则说明没有位置。</p>
 <p>时间复杂度 $O(n \log n)$</p>
 <p>空间复杂度 $O(n)$</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> l, r, v;</span><br><span class="line">&#125;a[<span class="number">10007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n &gt;&gt; m) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; m;i++) cin &gt;&gt; a[i].l &gt;&gt; a[i].r &gt;&gt; a[i].v;</span><br><span class="line">        <span class="built_in">sort</span>(a, a + m, [&amp;](node a, node b) &#123;<span class="keyword">return</span> a.l &lt; b.l;&#125;);</span><br><span class="line">        priority_queue&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;, vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;, greater&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;&gt; pq;</span><br><span class="line">        <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, pos = <span class="number">0</span>;i &lt;= n;i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!pq.<span class="built_in">empty</span>() &amp;&amp; pq.<span class="built_in">top</span>().first &lt; i) pq.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">while</span> (pos &lt; m &amp;&amp; a[pos].l == i) &#123;</span><br><span class="line">                pq.<span class="built_in">push</span>(&#123; a[pos].r,a[pos].v &#125;);</span><br><span class="line">                pos++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!pq.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                ans++;</span><br><span class="line">                pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; x = pq.<span class="built_in">top</span>();</span><br><span class="line">                pq.<span class="built_in">pop</span>();</span><br><span class="line">                x.second--;</span><br><span class="line">                <span class="keyword">if</span> (x.second) pq.<span class="built_in">push</span>(x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p><strong>知识点：贪心，优先队列。</strong></p>
+<p>典型的后悔贪心题。花费是常数 $1$ ，限制和收益是变量。使用小顶堆维护后悔操作，按从限制从小到大排序入队。</p>
+<p>时间复杂度 $O(n\log n)$</p>
+<p>空间复杂度 $O(n)$</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="方法一-1"><a href="#方法一-1" class="headerlink" title="方法一"></a>方法一</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> p, d;</span><br><span class="line">&#125;a[<span class="number">10007</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> fa[<span class="number">10007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.p &gt; b.p;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> fa[x] == x ? x : fa[x] = <span class="built_in">find</span>(fa[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    fa[<span class="built_in">find</span>(x)] = <span class="built_in">find</span>(y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">1e4</span>;i++) fa[i] = i;<span class="comment">///注意是天数的集合</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)  cin &gt;&gt; a[i].p &gt;&gt; a[i].d;</span><br><span class="line">        <span class="built_in">sort</span>(a + <span class="number">1</span>, a + n + <span class="number">1</span>, cmp);</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) &#123;</span><br><span class="line">            <span class="type">int</span> r = <span class="built_in">find</span>(a[i].d);</span><br><span class="line">            <span class="keyword">if</span> (r) &#123;</span><br><span class="line">                <span class="built_in">merge</span>(r, r - <span class="number">1</span>);<span class="comment">///以之前的第一个可用天为根，即把之前的第一个可用天当作从此天开始的可用天</span></span><br><span class="line">                sum += a[i].p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; sum &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法二-1"><a href="#方法二-1" class="headerlink" title="方法二"></a>方法二</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> p, d;</span><br><span class="line">&#125;a[<span class="number">10007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(node a, node b)</span> </span>&#123; <span class="keyword">return</span> a.d &lt; b.d; &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i++) cin &gt;&gt; a[i].p &gt;&gt; a[i].d;</span><br><span class="line">        <span class="built_in">sort</span>(a, a + n, cmp);</span><br><span class="line">        priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;, greater&lt;<span class="type">int</span>&gt; &gt; pq;</span><br><span class="line">        <span class="type">int</span> sum = <span class="number">0</span>, ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i++) &#123;</span><br><span class="line">            pq.<span class="built_in">push</span>(a[i].p);</span><br><span class="line">            sum += a[i].p;</span><br><span class="line">            <span class="keyword">while</span> (pq.<span class="built_in">size</span>() &gt; a[i].d) &#123;</span><br><span class="line">                sum -= pq.<span class="built_in">top</span>();</span><br><span class="line">                pq.<span class="built_in">pop</span>();</span><br><span class="line">            &#125;</span><br><span class="line">            ans = <span class="built_in">max</span>(ans, sum);</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
     
@@ -336,7 +348,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://blankyang233.github.io/2022/07/08/NC20951 网络优化/" title="NC20951 网络优化" target="_blank">https://blankyang233.github.io/2022/07/08/NC20951 网络优化/</a>
+          <a href="https://blankyang233.github.io/2022/07/10/POJ1456 Supermarket/" title="POJ1456 Supermarket" target="_blank">https://blankyang233.github.io/2022/07/10/POJ1456 Supermarket/</a>
         </li>
         
         <li>
@@ -363,6 +375,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">贪心</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">并查集</a>
         		</li>
       		
 		</ul>
@@ -429,7 +445,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/08/NC20951%20%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/10/POJ1456%20Supermarket/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -444,18 +460,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/07/08/NC50940%20Running%20Median/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/07/10/POJ1417%20True%20Liars/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          NC50940 Running Median
+          POJ1417 True Liars
         
       </div>
     </a>
   
   
-    <a href="/2022/07/08/NC14291%20Cut/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">NC14291 Cut</div>
+    <a href="/2022/07/10/NC235745%20%E6%8B%86%E8%B7%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">NC235745 拆路</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -482,7 +498,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">题解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-number">2.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">2.2.</span> <span class="toc-text">方法二</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-1"><span class="toc-number">3.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-1"><span class="toc-number">3.2.</span> <span class="toc-text">方法二</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

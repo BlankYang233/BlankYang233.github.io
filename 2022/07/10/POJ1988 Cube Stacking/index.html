@@ -18,7 +18,7 @@
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-10T08:05:22.000Z">
-<meta property="article:modified_time" content="2022-07-10T08:05:55.492Z">
+<meta property="article:modified_time" content="2022-07-10T15:49:39.672Z">
 <meta property="article:author" content="空白">
 <meta property="article:tag" content="并查集">
 <meta name="twitter:card" content="summary">
@@ -274,7 +274,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">995字</span>
+      <span class="post-count">996字</span>
     </span>
   </span>
 
@@ -319,7 +319,7 @@
 <p>带权并查集的路径压缩和合并操作都能用向量理解。</p>
 <p>首先是路径压缩，已知 $A$ 到父节点 $B$ 的权值，即 $A$ 下面到 $B$ 有多少方块，以及 $B$  到根节点的权值，那么 $A$ 到根节点的权值就是 $A$ 到父节点 $B$ 的权值加上 $B$  到根节点的权值，即 $\vec{AB} + \vec{BR} &#x3D; \vec{AR}$。这样递归实现即可，先解决 $B$ 到根节点的权值问题，再解决 $A$ 到根节点的权值问题。</p>
 <p>其次是合并操作，我们要把栈 $A$ 放在栈 $B$ 之上，那么 $B$ 权就为 $A$ 方块数加上 $B$ 的方块数，$A$ 权就为 $B$ 的方块数，即 $\vec{AB} &#x3D; |B|$ ，$|B| &#x3D; |A|+|B|$ 。这里因为根节点的权值与其他节点意义不同，没有体现向量解释的妙qwq。</p>
-<p>时间复杂度 $O(P\log N)$</p>
+<p>时间复杂度 $O(P\log N + N)$</p>
 <p>空间复杂度 $O(N)$   </p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> fa[<span class="number">30007</span>], a[<span class="number">30007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (fa[x] == x) <span class="keyword">return</span> x; <span class="comment">///返回根节点</span></span><br><span class="line">    <span class="type">int</span> pre = fa[x];<span class="comment">///保存原父节点</span></span><br><span class="line">    fa[x] = <span class="built_in">find</span>(fa[x]);<span class="comment">///更新原父节点到根节点的距离，更新父节点为根节点</span></span><br><span class="line">    <span class="keyword">if</span> (pre != fa[pre]) a[x] += a[pre];<span class="comment">///原父节点不是根节点，则距离为原父节点到根节点距离加自身到原父节点距离</span></span><br><span class="line">    <span class="keyword">return</span> fa[x];<span class="comment">///返回根节点</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">///根节点栈底元素，权值表示整个栈元素个数</span></span><br><span class="line"><span class="comment">///其他节点表示非栈底元素，权值表示到父节点的距离</span></span><br><span class="line"><span class="comment">///当然也可以把距离和栈大小分开成两个数组，而不是合并在一个权值里，会方便一点</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">30000</span>;i++) a[i] = <span class="number">1</span>, fa[i] = i;</span><br><span class="line">    <span class="type">int</span> p;</span><br><span class="line">    cin &gt;&gt; p;</span><br><span class="line">    <span class="keyword">while</span> (p--) &#123;</span><br><span class="line">        <span class="type">char</span> op;</span><br><span class="line">        cin &gt;&gt; op;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&#x27;M&#x27;</span>) &#123;</span><br><span class="line">            <span class="type">int</span> x, y;</span><br><span class="line">            cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line"></span><br><span class="line">            <span class="type">int</span> rx = <span class="built_in">find</span>(x);</span><br><span class="line">            <span class="type">int</span> ry = <span class="built_in">find</span>(y);</span><br><span class="line"></span><br><span class="line">            fa[rx] = ry;<span class="comment">///x根的父更新为y根</span></span><br><span class="line">            <span class="type">int</span> t = a[ry];<span class="comment">///y权 = 原x权+原y权，x权 = 原y权</span></span><br><span class="line">            a[ry] += a[rx];</span><br><span class="line">            a[rx] = t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&#x27;C&#x27;</span>) &#123;</span><br><span class="line">            <span class="type">int</span> x;</span><br><span class="line">            cin &gt;&gt; x;</span><br><span class="line">            cout &lt;&lt; (<span class="built_in">find</span>(x) == x ? <span class="number">0</span> : a[x]) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>; <span class="comment">///距离在查之前要更新的，因为不知道这条路径是否查询过</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -656,11 +656,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color4">并查集</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">并查集</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">

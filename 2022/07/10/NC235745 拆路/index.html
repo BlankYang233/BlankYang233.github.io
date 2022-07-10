@@ -18,7 +18,7 @@
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-10T14:05:46.000Z">
-<meta property="article:modified_time" content="2022-07-10T14:06:26.231Z">
+<meta property="article:modified_time" content="2022-07-10T15:53:41.035Z">
 <meta property="article:author" content="空白">
 <meta property="article:tag" content="并查集">
 <meta property="article:tag" content="离线">
@@ -275,7 +275,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">834字</span>
+      <span class="post-count">835字</span>
     </span>
   </span>
 
@@ -317,7 +317,7 @@
 
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：并查集，离线。</strong></p>
 <p>普通并查集不支持撤销操作，这使得这道题难以解答，但转换一下思路，撤销的逆过程是新增，是并查集适用的操作，于是可以保存所有访问数据，离线逆向处理，再将答案保存最后输出即可。</p>
-<p>时间复杂度 $O((m \log n + q)\log q)$</p>
+<p>时间复杂度 $O((m \log n + q)\log q + n)$</p>
 <p>空间复杂度 $O(q+n+m)$</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> w[<span class="number">100007</span>];</span><br><span class="line"><span class="type">int</span> u[<span class="number">100007</span>], v[<span class="number">100007</span>];</span><br><span class="line"><span class="type">int</span> du[<span class="number">100007</span>], dv[<span class="number">100007</span>];</span><br><span class="line">set&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; s;</span><br><span class="line"><span class="type">int</span> fa[<span class="number">100007</span>];</span><br><span class="line"><span class="type">int</span> ans[<span class="number">100007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> fa[x] == x ? x : fa[x] = <span class="built_in">find</span>(fa[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> rx = <span class="built_in">find</span>(x);</span><br><span class="line">    <span class="type">int</span> ry = <span class="built_in">find</span>(y);</span><br><span class="line">    <span class="keyword">if</span> (w[rx] &lt; w[ry]) fa[rx] = ry;</span><br><span class="line">    <span class="keyword">else</span> fa[ry] = rx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) fa[i] = i;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) cin &gt;&gt; w[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++) cin &gt;&gt; u[i] &gt;&gt; v[i];</span><br><span class="line">    <span class="type">int</span> q;</span><br><span class="line">    cin &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= q;i++) &#123;</span><br><span class="line">        <span class="type">char</span> op;</span><br><span class="line">        cin &gt;&gt; op;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="string">&#x27;Q&#x27;</span>) cin &gt;&gt; du[i];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="string">&#x27;D&#x27;</span>) &#123;</span><br><span class="line">            cin &gt;&gt; du[i] &gt;&gt; dv[i];</span><br><span class="line">            s.<span class="built_in">insert</span>(&#123; du[i],dv[i] &#125;);</span><br><span class="line">            s.<span class="built_in">insert</span>(&#123; dv[i],du[i] &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++)</span><br><span class="line">        <span class="keyword">if</span> (s.<span class="built_in">find</span>(&#123; u[i],v[i] &#125;) == s.<span class="built_in">end</span>())</span><br><span class="line">            <span class="built_in">merge</span>(u[i], v[i]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = q;i &gt;= <span class="number">1</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (dv[i]) <span class="built_in">merge</span>(du[i], dv[i]);</span><br><span class="line">        <span class="keyword">else</span> ans[i] = w[<span class="built_in">find</span>(du[i])];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= q;i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (ans[i]) cout &lt;&lt; ans[i] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -442,6 +442,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2022/07/10/POJ1456%20Supermarket/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          POJ1456 Supermarket
+        
+      </div>
+    </a>
   
   
     <a href="/2022/07/10/NC51097%20Parity%20game/" id="article-nav-older" class="article-nav-link-wrap">
@@ -649,11 +658,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color4">并查集</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">并查集</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">

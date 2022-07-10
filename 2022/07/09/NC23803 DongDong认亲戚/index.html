@@ -18,7 +18,7 @@
 <meta property="og:description" content="题目链接">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-09T14:45:45.000Z">
-<meta property="article:modified_time" content="2022-07-09T14:46:14.826Z">
+<meta property="article:modified_time" content="2022-07-10T15:55:17.591Z">
 <meta property="article:author" content="空白">
 <meta property="article:tag" content="并查集">
 <meta name="twitter:card" content="summary">
@@ -274,7 +274,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">657字</span>
+      <span class="post-count">658字</span>
     </span>
   </span>
 
@@ -318,7 +318,7 @@
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：并查集。</strong></p>
 <p>并查集模板题。并查集把有关系的一类放进一个集合，用其中一个节点作为根节点代表这个集合，于是建立关系就相当于把两个集合的根节点相连合并成一个集合（因此要满足传递性），查询时就看根节点是不是同一个就知道是不是在一个集合。</p>
 <p>并查集查询时间在路径压缩后是常数的，合并时间是对数的。启发式合并（按秩合并）查询时间是对数的，合并时间是常数的。如果并查集同时使用启发式合并和路径压缩，那么合并时间和查询时间都是近似于常数的，准确的说是 $O(\alpha(n))$ ，其中 $\alpha$ 函数在 $10^{80}$ 内不超过 $4$ ，所以可以认为是常数的。通常我们只使用路径压缩即可。</p>
-<p>时间复杂度 $O(m \log n)$</p>
+<p>时间复杂度 $O(m \log n + n)$</p>
 <p>空间复杂度 $O(n)$</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> fa[<span class="number">20007</span>];</span><br><span class="line">unordered_map&lt;string, <span class="type">int</span>&gt; mp;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> fa[x] == x ? x : fa[x] = <span class="built_in">find</span>(fa[x]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) &#123;</span><br><span class="line">        fa[i] = i;</span><br><span class="line">        string s;</span><br><span class="line">        cin &gt;&gt; s;</span><br><span class="line">        mp[s] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>;i &lt; m;i++) &#123;</span><br><span class="line">        <span class="type">int</span> op;</span><br><span class="line">        string x, y;</span><br><span class="line">        cin &gt;&gt; op &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span> (op == <span class="number">1</span>) fa[<span class="built_in">find</span>(mp[x])] = <span class="built_in">find</span>(mp[y]);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (op == <span class="number">2</span>) cout &lt;&lt; (<span class="built_in">find</span>(mp[x]) == <span class="built_in">find</span>(mp[y])) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -655,11 +655,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数学</a>
+                <a href="javascript:void(0)" class="js-tag color4">并查集</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">并查集</a>
+                <a href="javascript:void(0)" class="js-tag color3">数学</a>
               </li>
              
               <li class="article-tag-list-item">
