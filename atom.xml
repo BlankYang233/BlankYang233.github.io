@@ -6,7 +6,7 @@
   <link href="https://blankyang233.github.io/atom.xml" rel="self"/>
   
   <link href="https://blankyang233.github.io/"/>
-  <updated>2022-07-24T13:58:45.739Z</updated>
+  <updated>2022-07-24T14:15:29.450Z</updated>
   <id>https://blankyang233.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022.7.24 多校周报</title>
+    <link href="https://blankyang233.github.io/2022/07/24/2022.7.24%20%E5%A4%9A%E6%A0%A1%E5%91%A8%E6%8A%A5/"/>
+    <id>https://blankyang233.github.io/2022/07/24/2022.7.24%20%E5%A4%9A%E6%A0%A1%E5%91%A8%E6%8A%A5/</id>
+    <published>2022-07-24T14:15:01.000Z</published>
+    <updated>2022-07-24T14:15:29.450Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结</p><span id="more"></span><h1 id="个人感受"><a href="#个人感受" class="headerlink" title="个人感受"></a>个人感受</h1><p>刚打完两场多校赛，体会了什么是区域赛的难度，总的来说就是崩的很厉害。</p><p>第一场签了到，简单题都没打完，就A了两道。主要是策略问题，开始时想快速分工开题，但这种方法并不适合我们，因为我们太菜了，个人实力并不能完整解决一道题，需要讨论，因此第二场决定三个人同时攻打一道题。</p><p>第二场签了到就开始罚坐，就A了一题。虽说策略上没什么问题，但综合实力还是太弱，不足以攻克其他题目，结果还是惨败。有的题目属于是知道要写什么，但就是写不对；更多的题目是压根不知道在说什么，甚至签到题都不知道怎么入手，还是练的太少了。</p><h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>再好策略也救不了实力上的差距，区域赛难度对现在的我来说还是有点大。</p><p>不过可以预见的是距离铜牌线只差一点做题经验积累，因为铜牌线并不涉及高深的知识，基本的贪心，动态规划，二分或三分等等就够了，主要就是运用的方法和技巧并不熟练，这方面可以在cf上训练思维。</p><p>再者，对我来说，我是大学零基础学习，需要补上许多东西，距离能顺利打好区域赛的简单题还是需要一点理论上的训练，这方面暑假一直在进行，效果还算可以。</p><p>未来打算先把入门的东西学会，再去cf上练内功，同时深入学习专题。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;总结&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="摸鱼日记" scheme="https://blankyang233.github.io/categories/%E6%91%B8%E9%B1%BC%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>2022.5.22 周报</title>
@@ -277,9 +296,9 @@
     <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
-    
     <category term="BFS" scheme="https://blankyang233.github.io/tags/BFS/"/>
+    
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
@@ -344,9 +363,9 @@
     <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
-    
     <category term="BFS" scheme="https://blankyang233.github.io/tags/BFS/"/>
+    
+    <category term="优先队列" scheme="https://blankyang233.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
@@ -414,29 +433,6 @@
     
     
     <category term="BFS" scheme="https://blankyang233.github.io/tags/BFS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NC202589 魔法数字</title>
-    <link href="https://blankyang233.github.io/2022/07/16/NC202589%20%E9%AD%94%E6%B3%95%E6%95%B0%E5%AD%97/"/>
-    <id>https://blankyang233.github.io/2022/07/16/NC202589%20%E9%AD%94%E6%B3%95%E6%95%B0%E5%AD%97/</id>
-    <published>2022-07-16T08:46:10.000Z</published>
-    <updated>2022-07-16T08:46:36.632Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://ac.nowcoder.com/acm/problem/202589">题目链接</a></p><span id="more"></span><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><strong>题目描述</strong></p><p>牛妹给牛牛写了一个数字n，然后又给自己写了一个数字m，她希望牛牛能执行最少的操作将他的数字转化成自己的。<br> 操作共有三种，如下：<br> 1.在当前数字的基础上加一，如：4转化为5<br> 2.在当前数字的基础上减一，如：4转化为3<br> 3.将当前数字变成它的平方，如：4转化为16</p><p> 返回最少需要的操作数。</p><p><strong>示例1</strong></p><p><strong>输入</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3,10</span><br></pre></td></tr></table></figure><p><strong>返回值</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure><p><strong>备注</strong></p><p>$(1\leq n,m\leq1000)$</p><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p><strong>知识点：BFS，数学。</strong></p><p>显然用bfs，不过要注意限制条件，只有小于目标时才能加法和乘方，其中乘方的结果不能超过 $1024$；减法结果不能小于 $0$ 。</p><p>时间复杂度 $O(1)$</p><p>空间复杂度 $O(1)$ </p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> vis[<span class="number">1200</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">    q.<span class="built_in">push</span>(n);</span><br><span class="line">    vis[n] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> cur = q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (cur == m) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span> (cur &lt; m) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!vis[cur + <span class="number">1</span>]) &#123;</span><br><span class="line">                q.<span class="built_in">push</span>(cur + <span class="number">1</span>);</span><br><span class="line">                vis[cur + <span class="number">1</span>] = vis[cur] + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (cur * cur &lt;= <span class="number">1024</span> &amp;&amp; !vis[cur * cur]) &#123;</span><br><span class="line">                q.<span class="built_in">push</span>(cur * cur);</span><br><span class="line">                vis[cur * cur] = vis[cur] + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!vis[cur - <span class="number">1</span>]) &#123;</span><br><span class="line">            q.<span class="built_in">push</span>(cur - <span class="number">1</span>);</span><br><span class="line">            vis[cur - <span class="number">1</span>] = vis[cur] + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">bfs</span>(n, m);</span><br><span class="line">    cout &lt;&lt; vis[m] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://ac.nowcoder.com/acm/problem/202589&quot;&gt;题目链接&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="A题笔记" scheme="https://blankyang233.github.io/categories/A%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="BFS" scheme="https://blankyang233.github.io/tags/BFS/"/>
-    
-    <category term="数学" scheme="https://blankyang233.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
