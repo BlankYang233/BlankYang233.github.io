@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blankyang233.github.io">
-  <title>Archives | 空白のBlog</title>
+  <title>蔚来杯2022牛客暑期多校训练营4 | 空白のBlog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="写一点小东西">
-<meta property="og:type" content="website">
-<meta property="og:title" content="空白のBlog">
-<meta property="og:url" content="https://blankyang233.github.io/archives/page/2/index.html">
+  <meta name="description" content="比赛链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蔚来杯2022牛客暑期多校训练营4">
+<meta property="og:url" content="https://blankyang233.github.io/2022/07/31/%E8%94%9A%E6%9D%A5%E6%9D%AF2022%E7%89%9B%E5%AE%A2%E6%9A%91%E6%9C%9F%E5%A4%9A%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%90%A54/index.html">
 <meta property="og:site_name" content="空白のBlog">
-<meta property="og:description" content="写一点小东西">
+<meta property="og:description" content="比赛链接">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-31T06:32:27.000Z">
+<meta property="article:modified_time" content="2022-07-31T06:32:57.811Z">
 <meta property="article:author" content="空白">
 <meta name="twitter:card" content="summary">
   
@@ -256,549 +258,260 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-蔚来杯2022牛客暑期多校训练营4" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/24/2022.4.23%20%E5%A4%A9%E6%A2%AF%E8%B5%9B%E6%80%BB%E7%BB%93/" class="archive-article-date">
-        <time datetime="2022-07-24T13:52:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-24</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/24/2022.4.23%20%E5%A4%A9%E6%A2%AF%E8%B5%9B%E6%80%BB%E7%BB%93/" target="_blank">2022.4.23 天梯赛总结</a>
   
+    <h1 class="article-title" itemprop="name">
+      蔚来杯2022牛客暑期多校训练营4
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/07/31/%E8%94%9A%E6%9D%A5%E6%9D%AF2022%E7%89%9B%E5%AE%A2%E6%9A%91%E6%9C%9F%E5%A4%9A%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%90%A54/" class="archive-article-date">
+        <time datetime="2022-07-31T06:32:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-31</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.5k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">13分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/33189">比赛链接</a></p>
+<span id="more"></span>
+
+<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p><strong>知识点：贪心，背包dp。</strong></p>
+<p>注意到交换邻项不影响其他的结果，可以通过邻项交换证明选择顺序，假设a在b前更优：<br>$$<br>\Sigma + w_a\Pi + w_bp_a\Pi + \Sigma’ \geq \Sigma + w_b\Pi + w_ap_b\Pi + \Sigma’\<br>w_a+w_bp_a \geq w_b + w_ap_b\<br>\frac{w_a}{1-p_a} \geq \frac{w_b}{1-p_b}<br>$$<br>发现排序性质只和自己有关，显然具有传递性，因此以此排序。</p>
+<p>但这只是确定了选择的顺序，即一个序列中元素应当出现的顺序，并不是指前 $m$ 个是最优的序列，因此需要通过背包dp，$f[i][j]$ 表示考虑到第 $i$ 个服务器，已经选了 $j$ 个。</p>
+<p>题目虽然要求我们必须选 $m$ 个，但由于收益全是正的，所以不需要初始化负无穷。</p>
+<p>因为在背包收益计算中如果正着选则需要记录前面选择的所有 $p$ 值累乘，很不方便。而倒着选，可以通过整体乘法给选好的都乘上这次选的 $p$ ，非常方便。</p>
+<p>时间复杂度 $O(n(m+\log n))$</p>
+<p>空间复杂度 $O(n+m)$</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    ll w, p;</span><br><span class="line">&#125;a[<span class="number">100007</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">double</span> f[<span class="number">27</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) cin &gt;&gt; a[i].w;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) cin &gt;&gt; a[i].p;</span><br><span class="line">    <span class="built_in">sort</span>(a + <span class="number">1</span>, a + <span class="number">1</span> + n, [&amp;](node a, node b) &#123;</span><br><span class="line">        <span class="keyword">return</span> a.w * <span class="number">10000</span> + b.w * a.p &gt; b.w * <span class="number">10000</span> + a.w * b.p;</span><br><span class="line">    &#125;);<span class="comment">///排的是选择的相对顺序，即如果选了a和b，则a在前比b在前更优的条件，而非前m个一定最优，最优子序列需要dp</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//for (int i = 1;i &lt;= n;i++) cout &lt;&lt; a[i].w &lt;&lt; &#x27; &#x27; &lt;&lt; a[i].p &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = n;i &gt;= <span class="number">1</span>;i--) &#123;<span class="comment">///倒着选，因为要累乘</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = m;j &gt;= <span class="number">1</span>;j--) &#123;</span><br><span class="line">            f[j] = <span class="built_in">max</span>(f[j], f[j - <span class="number">1</span>] * a[i].p / <span class="number">10000.0</span> + a[i].w);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">7</span>) &lt;&lt; f[m] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="D"><a href="#D" class="headerlink" title="D"></a>D</h1><h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p><strong>知识点：枚举，前缀和。</strong></p>
+<p>题目强制在线，卡掉了一些离线算法，此时还有一些如树套树，K-D树等结构可用（但我不会wwwwww。本题我用了较简单的方法。</p>
+<p>$dp[i][j]$ 代表IQ为 $i$ ，EQ为 $j$ 时需要满足的最小AQ。对于一个公司，把每个工作记录，通过 <code>min(dp[a][b],c)</code> 更新给出IQ,EQ的最低AQ。再通过递推式：<code>min(dp[i-1][j],dp[i][j])</code> ，<code>min(dp[i][j-1],dp[i][j])</code> 遍历状态空间，更新所有IQ,EQ的最低AQ。</p>
+<p>时间复杂度 $O(\Sigma m + n\cdot 400^2 + nq)$</p>
+<p>空间复杂度 $O(n\cdot 400^2)$</p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p><strong>知识点：枚举，前缀和。</strong></p>
+<p>$bs[i][j][k]$ 表示IQ,EQ,AQ时可以。因此有递推式： <code>bs[id][i][j][k] = bs[id][i][j][k] | bs[id][i - 1][j][k] | bs[id][i][j - 1][k] | bs[id][i][j][k - 1]</code> 。</p>
+<p>注意常数。</p>
+<p>时间复杂度 $O(\Sigma m + n\cdot 400^3 + nq)$</p>
+<p>空间复杂度 $O(n\cdot 400^3)$</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><h3 id="方法一-1"><a href="#方法一-1" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;random&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line"><span class="type">int</span> dp[<span class="number">17</span>][<span class="number">407</span>][<span class="number">407</span>];<span class="comment">///第id家公司，当IQ为i，EQ为j的能入职的最小AQ</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">memset</span>(dp, <span class="number">0x3f</span>, <span class="built_in">sizeof</span>(dp));</span><br><span class="line">    <span class="type">int</span> n, q;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> id = <span class="number">1</span>;id &lt;= n;id++) &#123;</span><br><span class="line">        <span class="type">int</span> m;</span><br><span class="line">        cin &gt;&gt; m;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++) &#123;<span class="comment">///表示IQ&gt;=a,EQ&gt;=b的最小AQ</span></span><br><span class="line">            <span class="type">int</span> a, b, c;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">            dp[id][a][b] = <span class="built_in">min</span>(dp[id][a][b], c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">400</span>;i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= <span class="number">400</span>;j++) &#123;<span class="comment">///发现有效区是一个向i,j,k方向展开的正方体，因此从坐标最小递推，取第三维能满足的最小值</span></span><br><span class="line">                dp[id][i][j] = <span class="built_in">min</span>(dp[id][i - <span class="number">1</span>][j], dp[id][i][j]);</span><br><span class="line">                dp[id][i][j] = <span class="built_in">min</span>(dp[id][i][j - <span class="number">1</span>], dp[id][i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> seed;</span><br><span class="line">    cin &gt;&gt; seed;</span><br><span class="line">    <span class="function">std::mt19937 <span class="title">rng</span><span class="params">(seed)</span></span>;</span><br><span class="line">    std::uniform_int_distribution&lt;&gt; <span class="built_in">u</span>(<span class="number">1</span>, <span class="number">400</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> lastans = <span class="number">0</span>, ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= q;i++) &#123;</span><br><span class="line">        <span class="type">int</span> IQ = (<span class="built_in">u</span>(rng) ^ lastans) % <span class="number">400</span> + <span class="number">1</span>;  <span class="comment">// The IQ of the i-th friend</span></span><br><span class="line">        <span class="type">int</span> EQ = (<span class="built_in">u</span>(rng) ^ lastans) % <span class="number">400</span> + <span class="number">1</span>;  <span class="comment">// The EQ of the i-th friend</span></span><br><span class="line">        <span class="type">int</span> AQ = (<span class="built_in">u</span>(rng) ^ lastans) % <span class="number">400</span> + <span class="number">1</span>;  <span class="comment">// The AQ of the i-th friend</span></span><br><span class="line">        lastans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">            lastans += dp[i][IQ][EQ] &lt;= AQ;  <span class="comment">// The answer to the i-th friend</span></span><br><span class="line">        ans = (<span class="number">1LL</span> * ans * seed + lastans) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法二-1"><a href="#方法二-1" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line">bitset&lt;401&gt; bs[<span class="number">11</span>][<span class="number">401</span>][<span class="number">401</span>];<span class="comment">///表示id公司，IQ = a,EQ = b,AQ = c时可以</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, q;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> id = <span class="number">1</span>;id &lt;= n;id++) &#123;</span><br><span class="line">        <span class="type">int</span> m;</span><br><span class="line">        cin &gt;&gt; m;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= m;i++) &#123;<span class="comment">///表示IQ = a,EQ = b,AQ = c时可以</span></span><br><span class="line">            <span class="type">int</span> a, b, c;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">            bs[id][a][b][c] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">400</span>;i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= <span class="number">400</span>;j++)</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">1</span>;k &lt;= <span class="number">400</span>;k++)<span class="comment">///正方体同上，因此从坐标最小递推，如果坐标小的满足那么这个也能满足</span></span><br><span class="line">                    bs[id][i][j][k] = bs[id][i][j][k] | bs[id][i - <span class="number">1</span>][j][k] | bs[id][i][j - <span class="number">1</span>][k] | bs[id][i][j][k - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> seed;</span><br><span class="line">    cin &gt;&gt; seed;</span><br><span class="line">    <span class="function">std::mt19937 <span class="title">rng</span><span class="params">(seed)</span></span>;</span><br><span class="line">    std::uniform_int_distribution&lt;&gt; <span class="built_in">u</span>(<span class="number">1</span>, <span class="number">400</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> lastans = <span class="number">0</span>, ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= q;i++) &#123;</span><br><span class="line">        <span class="type">int</span> IQ = (<span class="built_in">u</span>(rng) ^ lastans) % <span class="number">400</span> + <span class="number">1</span>;  <span class="comment">// The IQ of the i-th friend</span></span><br><span class="line">        <span class="type">int</span> EQ = (<span class="built_in">u</span>(rng) ^ lastans) % <span class="number">400</span> + <span class="number">1</span>;  <span class="comment">// The EQ of the i-th friend</span></span><br><span class="line">        <span class="type">int</span> AQ = (<span class="built_in">u</span>(rng) ^ lastans) % <span class="number">400</span> + <span class="number">1</span>;  <span class="comment">// The AQ of the i-th friend</span></span><br><span class="line">        lastans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">            lastans += bs[i][IQ][EQ][AQ] == <span class="number">1</span>;  <span class="comment">// The answer to the i-th friend</span></span><br><span class="line">        ans = (<span class="number">1LL</span> * ans * seed + lastans) % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="H"><a href="#H" class="headerlink" title="H"></a>H</h1><h2 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h2><p><strong>知识点：枚举，贪心，STL。</strong></p>
+<p>先求出面积 $S$ ，只需要枚举可能的长宽，在去检查这个长和宽的答案。对于一行，我们贪心地选择最接近剩余长度的砖块（类似sticks这题，剪枝好恶心qwq），过程中运用到 <code>multiset</code> 查找符合要求的砖块。</p>
+<p>时间复杂度 $O(n^3)$</p>
+<p>空间复杂度 $O(n^2)$</p>
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line">multiset&lt;<span class="type">int</span>&gt; ms;</span><br><span class="line">vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; tmp[<span class="number">207</span>], path[<span class="number">207</span>];<span class="comment">///长度为i的方块坐标</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">check</span><span class="params">(<span class="type">int</span> w, <span class="type">int</span> h)</span> </span>&#123;</span><br><span class="line">    ms.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) tmp[i].<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>;j &lt;= n - i + <span class="number">1</span>;j++) ms.<span class="built_in">insert</span>(i);</span><br><span class="line">    <span class="type">int</span> rem = w;<span class="comment">///剩余长度</span></span><br><span class="line">    <span class="type">int</span> hi = <span class="number">0</span>;<span class="comment">///底部高度</span></span><br><span class="line">    <span class="keyword">while</span> (hi &lt; h) &#123;</span><br><span class="line">        <span class="keyword">auto</span> p = ms.<span class="built_in">upper_bound</span>(rem);</span><br><span class="line">        <span class="keyword">if</span> (p == ms.<span class="built_in">begin</span>()) <span class="keyword">return</span>;</span><br><span class="line">        <span class="type">int</span> k = *<span class="built_in">prev</span>(p);</span><br><span class="line">        ms.<span class="built_in">erase</span>(<span class="built_in">prev</span>(p));<span class="comment">///erase(type)是删掉某个元素全部,删掉一个要用指针</span></span><br><span class="line">        tmp[k].<span class="built_in">push_back</span>(&#123; w - rem,hi &#125;);<span class="comment">///左下角</span></span><br><span class="line">        rem -= k;</span><br><span class="line">        <span class="keyword">if</span> (!rem) rem = w, hi++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">2</span> * (w + h) &lt; ans) &#123;</span><br><span class="line">        ans = <span class="number">2</span> * (w + h);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">            path[i] = tmp[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> S = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) S += (n - i + <span class="number">1</span>) * i;</span><br><span class="line">    ans = ~(<span class="number">1</span> &lt;&lt; <span class="number">31</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> w = <span class="number">1</span>;w * w &lt;= S;w++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (S % w == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="type">int</span> h = S / w;</span><br><span class="line">            <span class="built_in">check</span>(h, w);</span><br><span class="line">            <span class="built_in">check</span>(w, h);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> j : path[i])</span><br><span class="line">            cout &lt;&lt; j.first &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; j.second &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; j.first + i &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; j.second + <span class="number">1</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> t = <span class="number">1</span>;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">solve</span>()) cout &lt;&lt; <span class="number">-1</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="K"><a href="#K" class="headerlink" title="K"></a>K</h1><h2 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h2><p><strong>知识点：数论，枚举，思维。</strong></p>
+<p>首先特判 $n &#x3D; 1$ 时，不需要任何操作。</p>
+<p>当 $n &gt; 1$ 时，假设有 $A \equiv i-1\ (mod\ n)$ ，经过 $k\ (1 \leq k \leq 6)$ 次(因为不可能不操作，最多操作6次可以遍历最大的 $n$ )做操作后有如下式：<br>$$<br>\begin {aligned}<br>10^kA + x &amp;\equiv  i \ (mod\ n)\<br>x &amp;\equiv i-10^kA \ (mod\ n)<br>\end {aligned}<br>$$<br>因此对每个 $i$ 可以求出 $x$ 最小正整数解，若 $x &lt; 10^k$ 则说明成立。</p>
+<p>时间复杂度 $O(n)$</p>
+<p>空间复杂度 $O(1)$</p>
+<h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> tb[<span class="number">10</span>] = &#123; <span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">1000</span>,<span class="number">10000</span>,<span class="number">100000</span>,<span class="number">1000000</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="number">0</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) &#123;</span><br><span class="line">        <span class="type">int</span> k;</span><br><span class="line">        <span class="keyword">for</span> (k = <span class="number">1</span>;k &lt;= <span class="number">6</span>;k++) &#123;</span><br><span class="line">            <span class="type">int</span> x = ((i - <span class="number">1LL</span> * tb[k] * (i - <span class="number">1</span>)) % n + n) % n;<span class="comment">///可能负数所以先模再加再模</span></span><br><span class="line">            <span class="keyword">if</span> (x &lt; tb[k]) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ans += k;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/// x = i - 10^k(i-1)  (mod n)</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="N"><a href="#N" class="headerlink" title="N"></a>N</h1><h2 id="题解-4"><a href="#题解-4" class="headerlink" title="题解"></a>题解</h2><p><strong>知识点：位运算，思维，数学。</strong></p>
+<p>遍历输入数字的每位，最终得到每位一共有多少二进制 $1$ 存在，随后尽可能组成最大的数（因为根据与和或运算最终一定能将二进制为集中起来），随后计算方差即可 。方差有如下公式：<br>$$<br>\begin{aligned}<br>\frac{1}{n} \sum_{i&#x3D;1}^{n} (x_i-\mu)^2 &amp;&#x3D; \frac{1}{n}\left (\sum_{i&#x3D;1}^{n} x_i^2 - 2\mu\sum_{i&#x3D;1}^{n}x_i + n\mu^2 \right)\<br>&amp;&#x3D; \frac{1}{n^2}\left(\sum_{i&#x3D;1}^{n} x_i^2-(\sum_{i&#x3D;1}^{n} x_i)^2 \right)<br>\end{aligned}<br>$$<br>这样分子分母可以分别用整数计算。</p>
+<p>时间复杂度 $O(n)$</p>
+<p>空间复杂度 $O(n)$</p>
+<h2 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> bit[<span class="number">20</span>], a[<span class="number">100007</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>), cin.<span class="built_in">tie</span>(<span class="number">0</span>), cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, tmp;i &lt;= n;i++) &#123;<span class="comment">///拆二进制</span></span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; <span class="number">15</span>;j++)</span><br><span class="line">            <span class="keyword">if</span> ((tmp &gt;&gt; j) &amp; <span class="number">1</span>) bit[j]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)<span class="comment">///重组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>;j &lt; <span class="number">15</span>;j++)</span><br><span class="line">            <span class="keyword">if</span> (bit[j]) a[i] += <span class="number">1</span> &lt;&lt; j, bit[j]--;</span><br><span class="line">    ll sum = <span class="number">0</span>, sum2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++) &#123;</span><br><span class="line">        sum += a[i];<span class="comment">///虽然a&amp;b + a|b = a+b，但为了好看在这里加</span></span><br><span class="line">        sum2 += a[i] * a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">///1/n^2 (n*sum2 - sum^2) = 方差</span></span><br><span class="line">    ll x = n * sum2 - sum * sum;</span><br><span class="line">    ll y = <span class="number">1LL</span> * n * n;</span><br><span class="line">    ll d = __gcd(x, y);</span><br><span class="line">    cout &lt;&lt; x / d &lt;&lt; <span class="string">&#x27;/&#x27;</span> &lt;&lt; y / d &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          空白
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://blankyang233.github.io/2022/07/31/蔚来杯2022牛客暑期多校训练营4/" title="蔚来杯2022牛客暑期多校训练营4" target="_blank">https://blankyang233.github.io/2022/07/31/蔚来杯2022牛客暑期多校训练营4/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/摸鱼日记//" class="article-tag-list-link color5">摸鱼日记</a>
+        			<a href="/categories/比赛题解//" class="article-tag-list-link color5">比赛题解</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blankyang233.github.io/2022/07/31/%E8%94%9A%E6%9D%A5%E6%9D%AF2022%E7%89%9B%E5%AE%A2%E6%9A%91%E6%9C%9F%E5%A4%9A%E6%A0%A1%E8%AE%AD%E7%BB%83%E8%90%A54/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/24/VS%20Code%20%E8%B0%83%E6%95%99%E6%97%A5%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2022-07-24T13:49:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-24</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/30/2022.7.31%20%E5%A4%9A%E6%A0%A1%E5%91%A8%E6%8A%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2022.7.31 多校周报</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/24/VS%20Code%20%E8%B0%83%E6%95%99%E6%97%A5%E8%AE%B0/" target="_blank">VS Code 调教日记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/摸鱼日记//" class="article-tag-list-link color5">摸鱼日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A"><span class="toc-number">1.</span> <span class="toc-text">A</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">1.1.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#D"><span class="toc-number">2.</span> <span class="toc-text">D</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="toc-number">2.1.</span> <span class="toc-text">题解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="toc-number">2.1.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">2.1.2.</span> <span class="toc-text">方法二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-number">2.2.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">方法二</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#H"><span class="toc-number">3.</span> <span class="toc-text">H</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-number">3.1.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="toc-number">3.2.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#K"><span class="toc-number">4.</span> <span class="toc-text">K</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-number">4.1.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="toc-number">4.2.</span> <span class="toc-text">代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#N"><span class="toc-number">5.</span> <span class="toc-text">N</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-4"><span class="toc-number">5.1.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="toc-number">5.2.</span> <span class="toc-text">代码</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/24/%E6%9F%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%83%A8%E6%A1%88/" class="archive-article-date">
-        <time datetime="2022-07-24T13:46:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-24</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/24/%E6%9F%90%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%83%A8%E6%A1%88/" target="_blank">某数据结构惨案</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/摸鱼日记//" class="article-tag-list-link color5">摸鱼日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/CF590C%20Three%20States/" class="archive-article-date">
-        <time datetime="2022-07-16T12:33:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/CF590C%20Three%20States/" target="_blank">CF590C Three States</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/NC235247%20Sramoc%E9%97%AE%E9%A2%98/" class="archive-article-date">
-        <time datetime="2022-07-16T11:58:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/NC235247%20Sramoc%E9%97%AE%E9%A2%98/" target="_blank">NC235247 Sramoc问题</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/NC24605%20%5BUSACO%202011%20Ope%20S%5DCorn%20Maze/" class="archive-article-date">
-        <time datetime="2022-07-16T11:51:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/NC24605%20%5BUSACO%202011%20Ope%20S%5DCorn%20Maze/" target="_blank">NC24605 [USACO 2011 Ope S]Corn Maze</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/NC19975%20%5BHAOI2008%5D%E7%A7%BB%E5%8A%A8%E7%8E%A9%E5%85%B7/" class="archive-article-date">
-        <time datetime="2022-07-16T11:42:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/NC19975%20%5BHAOI2008%5D%E7%A7%BB%E5%8A%A8%E7%8E%A9%E5%85%B7/" target="_blank">NC19975 [HAOI2008]移动玩具</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">状压</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/NC17872%20CSL%E7%9A%84%E6%A0%A1%E5%9B%AD%E5%8D%A1/" class="archive-article-date">
-        <time datetime="2022-07-16T11:28:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/NC17872%20CSL%E7%9A%84%E6%A0%A1%E5%9B%AD%E5%8D%A1/" target="_blank">NC17872 CSL的校园卡</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">状压</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/NC15445%20wyh%E7%9A%84%E5%90%83%E9%B8%A1/" class="archive-article-date">
-        <time datetime="2022-07-16T11:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/NC15445%20wyh%E7%9A%84%E5%90%83%E9%B8%A1/" target="_blank">NC15445 wyh的吃鸡</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">优先队列</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/07/16/NC15136%20%E8%BF%B7%E5%AE%AB/" class="archive-article-date">
-        <time datetime="2022-07-16T10:21:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-07-16</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/07/16/NC15136%20%E8%BF%B7%E5%AE%AB/" target="_blank">NC15136 迷宫</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BFS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/A题笔记//" class="article-tag-list-link color5">A题笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><a class="extend next" rel="next" href="/archives/page/3/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -839,8 +552,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
